@@ -4,13 +4,15 @@
     --clr-red: #b3001b;
     --clr-blue: #7ea3cc;
     --clr-tan: #ccad8f;
-    --clr-light: #cedff3; 
+    --clr-light: #cedff3;
 }
 
-body,html {
+body,
+html {
     margin: 0;
     padding: 0;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -28,7 +30,8 @@ h2 {
     margin: 0 auto;
 }
 
-p, a {
+p,
+a {
     font-family: sans-serif;
 }
 
@@ -50,7 +53,7 @@ p, a {
     margin-bottom: 100px;
 }
 
-#menu > * {
+#menu>* {
     width: 100px;
     flex: none;
     line-height: 150%;
@@ -65,10 +68,45 @@ p, a {
 /* GAME */
 
 #game-container {
-    background-color: #b3001b;
-
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 #game-container div {
     border: 1px solid var(--clr-red);
+}
+
+#playing-area {
+    flex-grow: 2;
+    background-color: #262626;
+}
+
+.hand {
+    flex: none;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    height: 25%;
+    gap: 10px;
+}
+
+#player-hand {}
+
+#enemy-hand {}
+
+#decks-wrapper {
+    position: fixed;
+}
+#scores-wrapper {
+    position: fixed;
 }
