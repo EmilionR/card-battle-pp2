@@ -20,7 +20,25 @@ h2 {
     font-size: 400%;
 }
 
+p, a {
+    font-family: sans-serif;
+}
+
 #menu {
     display: flex;
     width: 100%;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+#menu > * {
+    width: 100px;
+    flex: none;
+    line-height: 150%;
+    padding: 10px;
+    background-color: #b3001b;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
 }
