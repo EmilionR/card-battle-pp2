@@ -79,7 +79,7 @@ a {
     gap: 10px;
 }
 
-#game-container div {
+#game-container > div {
     border: 1px solid var(--clr-red);
 }
 
@@ -100,7 +100,9 @@ a {
     gap: 10px;
 }
 
-#player-hand {}
+#player-hand {
+    
+}
 
 #enemy-hand {}
 
@@ -108,5 +110,16 @@ a {
     position: fixed;
 }
 #scores-wrapper {
+    display: flex;
     position: fixed;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    gap: 40px;
+    left: 2%;
+    height: 100%;
+    width: 200px;
+    max-width: 80px;
+    align-items: center;
+    padding: 1% 5px 4%;
+    font-size: 300%;
 }
