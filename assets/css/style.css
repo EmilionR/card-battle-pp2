@@ -1,3 +1,12 @@
+:root {
+
+    --clr-black: #262626;
+    --clr-red: #b3001b;
+    --clr-blue: #7ea3cc;
+    --clr-tan: #ccad8f;
+    --clr-light: #cedff3; 
+}
+
 body,html {
     margin: 0;
     padding: 0;
@@ -13,11 +22,14 @@ body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    justify-content: center;
 }
 
 h2 {
+    font-family: sans-serif;
     text-align: center;
-    font-size: 400%;
+    font-size: 600%;
+    margin: 0 auto;
 }
 
 p, a {
@@ -29,6 +41,7 @@ p, a {
     width: 100%;
     justify-content: space-evenly;
     gap: 20px;
+    margin-bottom: 100px;
 }
 
 #menu > * {
@@ -36,7 +49,7 @@ p, a {
     flex: none;
     line-height: 150%;
     padding: 10px;
-    background-color: #b3001b;
+    background-color: var(--clr-red);
     text-align: center;
     border: none;
     border-radius: 25px;
