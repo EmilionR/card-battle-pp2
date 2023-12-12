@@ -85,7 +85,6 @@ a {
 
 #playing-area {
     flex-grow: 2;
-    background-color: #262626;
 }
 
 .hand {
@@ -107,7 +106,16 @@ a {
 #enemy-hand {}
 
 #decks-wrapper {
+    display: flex;
     position: fixed;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    gap: 40px;
+    right: 2%;
+    height: 92%;
+    width: 300px;
+    max-width: 80px;
+    align-items: center;
 }
 #scores-wrapper {
     display: flex;
@@ -116,7 +124,7 @@ a {
     justify-content: space-between;
     gap: 40px;
     left: 2%;
-    height: 100%;
+    height: 92%;
     width: 200px;
     max-width: 80px;
     align-items: center;
