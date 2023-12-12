@@ -42,7 +42,7 @@ a {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    background-color: #cedff3;
+    background-color: var(--clr-light);
 }
 
 #menu {
@@ -70,7 +70,7 @@ a {
 #game-container {
     display: flex;
     flex-flow: column nowrap;
-    background-color: aquamarine;
+    background-color: var(--clr-light);
     width: 100%;
     height: 100%;
     padding: 2%;
@@ -117,6 +117,23 @@ a {
     max-width: 80px;
     align-items: center;
 }
+
+.card, .deck {
+    height: 150px;
+    width: 100px;
+    flex: none;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 200%;
+    position: relative;
+}
+
+.card {
+    background-color: var(--clr-light);
+    border: 3px solid var(--clr-black);
+}
+
 #scores-wrapper {
     display: flex;
     position: fixed;
@@ -128,6 +145,6 @@ a {
     width: 200px;
     max-width: 80px;
     align-items: center;
-    padding: 1% 5px 4%;
+    padding: 1% 5px;
     font-size: 300%;
 }
