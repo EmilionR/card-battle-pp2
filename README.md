@@ -1,8 +1,14 @@
-# ELION GYM
+# CARD BATTLE
 
 ![Project-image]()
 
-This is a simple card game which, despite its simplicity, challenges the player.
+Card battle is simple card game which, despite its simplicity, challenges the player's brain.
+
+This is a game for people who want something quick and simple that still makes you think.
+
+The goal is to predict the opponent's move and choose the right card to go higher or lower at the right time to win the turn and collect the points.
+
+The game offers a bit of variety in terms of difficulty and round length.
 
 [View the website here]()
 
@@ -77,6 +83,8 @@ __Returning visitor goals__
 
 ![Color Palette](pp2-colors.png)
 
+I have made a color pallette that draws inspiration from a traditional deck of playing cards.
+
 ### Typography
 
 ### Images
@@ -104,15 +112,9 @@ GitHub - To store files and provide a live site.
 
 Google Fonts - For stylish headings.
 
-Font Awesome - For icons used throughout the site.
-
 Google Dev Tools - For debugging and trying out design improvements on the fly.
 
 GNU Image Manipulation Program - Cropping and scaling images for faster load times.
-
-Cloud Convert - For compressing images to webp for even faster page loading.
-
-Favicon.io - I used this to make the page favicon.
 
 Am I Responsive - For testing how the site looks on different devices.
 
@@ -129,7 +131,7 @@ The page was deployed with GitHub Pages, using the following procedure:
 
 ## Testing
 
-Please refer to [TESTING.md](documentation/TESTING.md) for testing documentation.
+Please refer to [TESTING.md](TESTING.md) for testing documentation.
 
 ### Solved Bugs
 
