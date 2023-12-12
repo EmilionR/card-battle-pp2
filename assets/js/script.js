@@ -15,5 +15,7 @@ function initGameState() {
  * Draw card into the selected hand
  */
 function drawCard() {
-
+    hand = document.getElementById("player-hand");
+    card = `<div class="card"><p>1</p></div>`;
+    hand.insertAdjacentHTML("beforeend", card);
 }
