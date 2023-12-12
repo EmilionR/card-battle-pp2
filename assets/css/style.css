@@ -19,11 +19,6 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    background-color: #cedff3;
 }
 
 h2 {
@@ -38,6 +33,14 @@ p, a {
 }
 
 /* MAIN MENU */
+
+#menu-screen {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #cedff3;
+}
 
 #menu {
     display: flex;
@@ -63,7 +66,7 @@ p, a {
 
 #game-container {
     background-color: #b3001b;
-    
+
 }
 
 #game-container div {
