@@ -23,6 +23,7 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    background-color: #cedff3;
 }
 
 h2 {
@@ -35,6 +36,8 @@ h2 {
 p, a {
     font-family: sans-serif;
 }
+
+/* MAIN MENU */
 
 #menu {
     display: flex;
@@ -54,4 +57,15 @@ p, a {
     border: none;
     border-radius: 25px;
     text-decoration: none;
+}
+
+/* GAME */
+
+#game-container {
+    background-color: #b3001b;
+    
+}
+
+#game-container div {
+    border: 1px solid var(--clr-red);
 }
