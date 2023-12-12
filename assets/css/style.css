@@ -93,17 +93,11 @@ a {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: flex-start;
     padding: 10px;
     height: 25%;
     gap: 10px;
+    align-items: center;
 }
-
-#player-hand {
-    
-}
-
-#enemy-hand {}
 
 #decks-wrapper {
     display: flex;
@@ -132,6 +126,11 @@ a {
 .card {
     background-color: var(--clr-light);
     border: 3px solid var(--clr-black);
+}
+
+.deck {
+    background-color: var(--clr-tan);
+    border: 3px solid var(--clr-red);
 }
 
 #scores-wrapper {
