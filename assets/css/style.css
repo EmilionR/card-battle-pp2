@@ -5,6 +5,7 @@
     --clr-blue: #7ea3cc;
     --clr-tan: #ccad8f;
     --clr-light: #cedff3;
+    --clr-white: #eeeeee;
 }
 
 body,
@@ -109,12 +110,12 @@ a {
     height: 92%;
     width: 300px;
     max-width: 80px;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .card, .deck {
-    height: 150px;
-    width: 100px;
+    height: 130px;
+    width: 90px;
     flex: none;
     border-radius: 4px;
     text-align: center;
@@ -124,14 +125,52 @@ a {
 }
 
 .card {
-    background-color: var(--clr-light);
+    background-color: var(--clr-white);
     border: 3px solid var(--clr-black);
     transition: all 200ms linear;
+    animation-duration: 700ms;
+    animation-name: drawCard;
+    animation-timing-function: linear;
+}
+
+.deck, .facedown {
+    background-color: var(--clr-tan);
+    border: 3px solid var(--clr-red);
+}
+
+@keyframes drawCard {
+    from {
+        z-index: 99;
+        right: -35%;
+        top: 0%;
+        background-color: var(--clr-tan);
+        border: 3px solid var(--clr-red);
+    }
+    39% {
+        right: -30%;
+        transform: rotateY(-90deg);
+        top: -16%;
+        background-color: var(--clr-tan);
+        border: 3px solid var(--clr-red);
+    }
+    40% {
+        right: -30%;
+        transform: rotateY(88deg);
+        top: -16%;
+        background-color: beige;
+        border: 3px solid black;
+    }
+    90% {
+        transform: rotateY(0deg);
+    }
+    to {
+        right: 0%;
+        top: 0%;
+    }
 }
 
 .deck {
-    background-color: var(--clr-tan);
-    border: 3px solid var(--clr-red);
+    margin: 10px;
 }
 
 #scores-wrapper {
