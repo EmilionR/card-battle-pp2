@@ -104,6 +104,19 @@ a {
     color: #262626;
 }
 
+.close-menu {
+    position: fixed;
+    right: 10%;
+    top: 10%;
+    color: var(--clr-white);
+    background-color: transparent;
+    border: 1px solid var(--clr-white);
+    outline: none;
+    font-size: 300%;
+    font-weight: 700;
+    border-radius: 12px;
+}
+
 /* GAME */
 
 #game-container {
