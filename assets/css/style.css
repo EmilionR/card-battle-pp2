@@ -125,10 +125,11 @@ a {
 }
 
 .card {
+    position: relative;
     background-color: var(--clr-white);
     border: 3px solid var(--clr-black);
     transition: all 200ms linear;
-    animation-duration: 700ms;
+    animation-duration: 500ms;
     animation-name: drawCard;
     animation-timing-function: linear;
 }
@@ -141,24 +142,10 @@ a {
 @keyframes drawCard {
     from {
         z-index: 99;
-        right: -35%;
+        right: -30%;
         top: 0%;
-        background-color: var(--clr-tan);
-        border: 3px solid var(--clr-red);
-    }
-    39% {
-        right: -30%;
-        transform: rotateY(-90deg);
-        top: -16%;
-        background-color: var(--clr-tan);
-        border: 3px solid var(--clr-red);
-    }
-    40% {
-        right: -30%;
         transform: rotateY(88deg);
-        top: -16%;
-        background-color: beige;
-        border: 3px solid black;
+
     }
     90% {
         transform: rotateY(0deg);
