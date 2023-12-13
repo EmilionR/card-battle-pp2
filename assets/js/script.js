@@ -85,12 +85,13 @@ function initializeHands() {
     }
 }
 
-function startRound() {
-
+function newTurn() {
+    drawCard("player")
+    drawCard("enemy")
 }
 
-function enableClick() {
 
+function enableClick() {
 }
 
 function disableClick() {
@@ -190,7 +191,7 @@ function endOfRound() {
     clearTable();
     console.log("Cards in hand: " + document.getElementById("player-hand").childNodes.length)
     if(document.getElementById("player-hand").childNodes.length > 0){
-        startRound();
+        newTurn();
     } else {
         gameOver();
     }
