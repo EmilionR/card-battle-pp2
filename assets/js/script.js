@@ -91,14 +91,20 @@ function disableClick() {
 /**
  * Draw card into the selected hand
  */
-function drawCard() {
-    hand = document.getElementById("player-hand");
-    
-    if(playerDeck.length > 0){
-        card = `<div class="card" onclick="playCard(this)"><p>${playerDeck[0].points}</p></div>`;
+function drawCard(whose) {
+    let hand, deck, card;
+    if(whose == 'player'){
+        hand = document.getElementById("player-hand");
+        deck = playerDeck;
+    } else {
+        hand = document.getElementById("enemy-hand");
+        deck = enemyDeck;
+    }
+    if(deck.length > 0){
+        card = `<div class="card" onclick="playCard(this)"><p>${deck[0].points}</p></div>`;
         hand.insertAdjacentHTML("beforeend", card);
-        playerDeck.shift();
-        console.log(playerDeck.length + " cards left in deck;")
+        deck.shift();
+        console.log(deck.length + " cards left in deck;")
     }
     else{
         console.log("Deck is empty")
