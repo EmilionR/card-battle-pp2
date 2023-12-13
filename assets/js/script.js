@@ -4,6 +4,7 @@ let playerScore = 0;
 let enemyScore = 0;
 let baseCards = []
 let enemyDeck, playerDeck;
+let cardsOnTable = [];
 
 createCards();
 initGameState();
@@ -93,6 +94,7 @@ function disableClick() {
  */
 function drawCard(whose) {
     let hand, deck, card;
+    //Check who's drawing the card
     if(whose == 'player'){
         hand = document.getElementById("player-hand");
         deck = playerDeck;
@@ -100,7 +102,9 @@ function drawCard(whose) {
         hand = document.getElementById("enemy-hand");
         deck = enemyDeck;
     }
+    //Check if deck still has cards
     if(deck.length > 0){
+        //Create new card element in hand div
         card = `<div class="card" onclick="playCard(this)"><p>${deck[0].points}</p></div>`;
         hand.insertAdjacentHTML("beforeend", card);
         deck.shift();
@@ -109,7 +113,14 @@ function drawCard(whose) {
     else{
         console.log("Deck is empty")
     }
-    
+    //Hide deck if empty
+    if(deck.length == 0){
+        if(whose == 'player'){
+            document.getElementById("player-deck").style.visibility = "hidden";
+        } else {
+            document.getElementById("enemy-deck").style.visibility = "hidden";
+        }
+    }
 }
 
 /**
@@ -119,4 +130,18 @@ function playCard(card) {
     let randomSpin = Math.floor(Math.random()* 50)
     card.style.position = "absolute";
     card.style.transform = `translate(-40px, -175px) rotate(${randomSpin}deg)`
+    cardsOnTable.push(card)
+    enemyPlay()
+}
+
+function enemyPlay() {
+    console.log("enemy choosing card")
+    let chosenCard = document.getElementById("enemy-hand").children[0];
+    console.log(chosenCard)
+    chosenCard.classList.remove("facedown");
+    chosenCard.setAttribute("active", "true")
+    chosenCard.style.position = "absolute";
+    chosenCard.style.transform = `translate(40px, 175px)`
+    cardsOnTable.push(chosenCard)
+    document.getElementById("test-button").classList.add("flashing");
 }
