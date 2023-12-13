@@ -113,7 +113,7 @@ function drawCard(whose) {
     //Check if deck still has cards
     if(deck.length > 0){
         //Create new card element in hand div
-        card = `<div class="card" onclick="playCard(this)"><p>${deck[0].points}</p></div>`;
+        card = `<div class="card" points="${deck[0].points}" onclick="playCard(this)"><p>${deck[0].points}</p></div>`;
         hand.insertAdjacentHTML("beforeend", card);
         deck.shift();
         console.log(deck.length + " cards left in deck;")
@@ -154,4 +154,30 @@ function enemyPlay() {
     chosenCard.style.transform = `translate(40px, 175px)`
     cardsOnTable.push(chosenCard)
     document.getElementById("test-button").classList.add("flashing");
+    document.getElementById("test-button").setAttribute("onclick", "compareCards()");
+}
+
+/**
+ * Compare player card to enemy card to determine winner of turn
+ */
+function compareCards () {
+    console.log("Comparing cards...")
+    //Compare value of cards on table
+    let playerCardValue = parseInt(cardsOnTable[0].getAttribute("points"));
+    console.log(playerCardValue);
+    let enemyCardValue = parseInt(cardsOnTable[1].getAttribute("points"));
+    console.log(enemyCardValue);
+    //Sum values together to create score for winner
+    let sum = playerCardValue + enemyCardValue;
+    if(playerCardValue < enemyCardValue){
+        console.log("You lose the round. Opp gets " + sum)
+        enemyScore += sum;
+    } else if (enemyCardValue < playerCardValue) {
+        console.log("You win the round and get " + sum)
+        playerScore += sum;
+    } else {
+        console.log("It's a draw!")
+    }
+    document.getElementById("test-button").classList.remove("flashing");
+    document.getElementById("test-button").setAttribute("onclick", "startRound()");
 }
