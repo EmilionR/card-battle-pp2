@@ -126,6 +126,7 @@ a {
 .card {
     background-color: var(--clr-light);
     border: 3px solid var(--clr-black);
+    transition: all 200ms linear;
 }
 
 .deck {
