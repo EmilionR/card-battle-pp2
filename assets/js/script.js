@@ -32,10 +32,17 @@ function createCards() {
     Number of cards: ${baseCards.length}`)
 }
 
+/**
+ * Create starting decks from base cards
+ */
 function initializeDecks() {
     enemyDeck = [...baseCards];
     playerDeck = [...baseCards];
-    console.log("Enemy deck:")
+    console.log("Attempt to shuffle player");
+    shuffleDeck(playerDeck);
+    console.log("Attempt to shuffle enemy");
+    shuffleDeck(enemyDeck);
+    console.log("Enemy deck:");
     for(let i = 0; i < enemyDeck.length; i++){
         console.log(enemyDeck[i]);
     }
@@ -45,8 +52,18 @@ function initializeDecks() {
     }
 }
 
+/**
+ * Shuffle deck to place array indexes in random order
+ */
 function shuffleDeck(deck) {
-
+    console.log("shuffling...");
+    let tempArr = [...deck];
+    for(let i = 0; i < tempArr.length; i++){
+        let randomCard = Math.floor(Math.random() * tempArr.length);
+        deck[i] = tempArr[randomCard];
+        tempArr.splice(i, 1)
+        console.log(tempArr)
+    }
 }
 
 function initializeHands() {
