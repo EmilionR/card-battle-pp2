@@ -181,3 +181,15 @@ function compareCards () {
     document.getElementById("test-button").classList.remove("flashing");
     document.getElementById("test-button").setAttribute("onclick", "startRound()");
 }
+
+function endOfRound() {
+
+}
+
+function clearTable() {
+
+}
+
+function gameOver() {
+    
+}
