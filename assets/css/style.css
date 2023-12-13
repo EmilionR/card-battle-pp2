@@ -79,7 +79,6 @@ a {
 }
 
 /* "How to play" modal */
-
 #info-screen {
     position: fixed;
     background-color: #262626;
@@ -88,8 +87,16 @@ a {
     top: 0;
     width: 100%;
     height: 100%;
-    padding: 50px;
+    padding: 10% 20%;
     text-align: center;
+}
+
+#menu-cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin: 5px;
 }
 
 /* GAME */
