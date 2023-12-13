@@ -86,13 +86,18 @@ function initializeHands() {
     enableClick();
 }
 
+/**
+ * Start new turn, players draw cards
+ */
 function newTurn() {
     drawCard("player")
     drawCard("enemy")
     enableClick();
 }
 
-
+/**
+ * Make player cards clickable
+ */
 function enableClick() {
     let hand = document.getElementById("player-hand");
 
@@ -102,6 +107,9 @@ function enableClick() {
     }
 }
 
+/**
+ * Prevent player from playing cards
+ */
 function disableClick() {
     let hand = document.getElementById("player-hand");
     for(let i = 0; i < hand.children.length; i++){
@@ -155,6 +163,7 @@ function playCard(card) {
     enemyPlay()
 }
 
+/**Enemy chooses a card and plays it to the board */
 function enemyPlay() {
     let hand =  document.getElementById("enemy-hand")
     //Choose a random card from hand
@@ -195,7 +204,8 @@ function compareCards () {
     document.getElementById("test-button").setAttribute("onclick", "endOfRound()");
 }
 
-function endOfRound() {
+/**Finish up turn and prepare for next turn */
+function endOfTurn() {
     console.log("Player: " + playerScore + ", Enemy: " + enemyScore);
     //Update score counters
     document.getElementById("player-score").firstChild.textContent = playerScore;
@@ -209,6 +219,9 @@ function endOfRound() {
     }
 }
 
+/**
+ * Remove all cards from board
+ */
 function clearTable() {
     for(card in cardsOnTable){
         cardsOnTable[card].remove();
@@ -216,6 +229,7 @@ function clearTable() {
     cardsOnTable = [];
 }
 
+/** End game and display win/lose message */
 function gameOver() {
     console.log("Game over")
     if(playerScore > enemyScore){
