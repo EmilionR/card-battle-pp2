@@ -21,10 +21,12 @@ function initGameState() {
  * Create base cards 1-9, from which all decks are made
  */
 function createCards() {
+    //Create cards with values from 1 to 9
     for(let i = 1; i <= 9; i++){
         let baseCard = {
             points: i,
         }
+        //Put card into base card array
         console.log("Creating card, value: " + baseCard.points)
         baseCards.push(baseCard)
     }
@@ -38,9 +40,7 @@ function createCards() {
 function initializeDecks() {
     enemyDeck = [...baseCards];
     playerDeck = [...baseCards];
-    console.log("Attempt to shuffle player");
     shuffleDeck(playerDeck);
-    console.log("Attempt to shuffle enemy");
     shuffleDeck(enemyDeck);
     console.log("Enemy deck:");
     for(let i = 0; i < enemyDeck.length; i++){
