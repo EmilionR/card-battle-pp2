@@ -57,12 +57,16 @@ function initializeDecks() {
  */
 function shuffleDeck(deck) {
     console.log("shuffling...");
+    let randomCard;
     let tempArr = [...deck];
-    for(let i = 0; i < tempArr.length; i++){
-        let randomCard = Math.floor(Math.random() * tempArr.length);
+    //Loop through the selected deck
+    for(let i = 0; i < deck.length; i++){
+        //Select random card from temporary array
+        randomCard = Math.floor(Math.random() * tempArr.length)
+        //Assign the random card to the current index of the deck
         deck[i] = tempArr[randomCard];
-        tempArr.splice(i, 1)
-        console.log(tempArr)
+        //Remove the randomized index from the temporary array before next loop cycle
+        tempArr.splice(randomCard, 1);
     }
 }
 
