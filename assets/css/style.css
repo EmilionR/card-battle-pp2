@@ -80,10 +80,6 @@ a {
     gap: 10px;
 }
 
-#game-container>div {
-    border: 1px solid var(--clr-red);
-}
-
 #playing-area {
     flex-grow: 2;
 }
@@ -208,11 +204,32 @@ a {
     .hand {
         gap: 25px;
     }
+
     .card,
     .deck {
-        height: 100px;
-        width: 60px;
+        height: 110px;
+        width: 70px;
     }
+
+    @media (max-height: 480px) {
+
+        .hand {
+            gap: 5px;
+        }
+
+        .card,
+        .deck {
+            height: 90px;
+            width: 60px;
+        }
+    
+        #scores-wrapper {
+            padding: 1% 5px;
+            justify-content: center;
+            gap: 4px;
+        }
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -227,7 +244,7 @@ a {
     }
 
     .hand {
-        gap: 16px;
+        gap: 12px;
     }
 
     .card,
@@ -237,17 +254,19 @@ a {
         text-align: center;
         font-size: 200%;
     }
-}
 
-@media screen and (max-height: 480px) {
-    .card,
-    .deck {
-        height: 100px;
-        width: 60px;
-    }
+    @media (max-height: 480px) {
 
-    #scores-wrapper {
-        padding: 1% 5px;
-        justify-content: space-between;
+        .card,
+        .deck {
+            height: 100px;
+            width: 60px;
+        }
+    
+        #scores-wrapper {
+            padding: 1% 5px;
+            justify-content: center;
+            gap: 4px;
+        }
     }
 }
