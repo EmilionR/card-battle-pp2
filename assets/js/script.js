@@ -2,17 +2,33 @@
 let handSize = 4;
 let playerScore = 0;
 let enemyScore = 0;
+let baseCards = []
+
+createCards();
+initGameState();
 
 /**
  * Initialize game state,
  * create base classes & reset relevant variables
  */
 function initGameState() {
-
+    console.log("Initializing game state")
 }
 
+/**
+ * Create base cards 1-9, from which all decks are made
+ */
 function createCards() {
-
+    for(let i = 1; i <= 9; i++){
+        let baseCard = {
+            points: i,
+            owner: ""
+        }
+        console.log("Creating card, value: " + baseCard.points)
+        baseCards.push(baseCard)
+    }
+    console.log(`Base cards created.
+    Number of cards: ${baseCards.length}`)
 }
 
 function initializeDecks() {
