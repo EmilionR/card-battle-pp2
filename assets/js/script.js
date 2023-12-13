@@ -93,9 +93,17 @@ function disableClick() {
  */
 function drawCard() {
     hand = document.getElementById("player-hand");
-    card = `<div class="card" onclick="playCard(this)"><p>${playerDeck[0].points}</p></div>`;
-    hand.insertAdjacentHTML("beforeend", card);
-    playerDeck.shift();
+    
+    if(playerDeck.length > 0){
+        card = `<div class="card" onclick="playCard(this)"><p>${playerDeck[0].points}</p></div>`;
+        hand.insertAdjacentHTML("beforeend", card);
+        playerDeck.shift();
+        console.log(playerDeck.length + " cards left in deck;")
+    }
+    else{
+        console.log("Deck is empty")
+    }
+    
 }
 
 /**
