@@ -38,8 +38,10 @@ function createCards() {
  * Create starting decks from base cards
  */
 function initializeDecks() {
+    //Create two clones of the base card deck
     enemyDeck = [...baseCards];
     playerDeck = [...baseCards];
+    //Shuffle each deck
     shuffleDeck(playerDeck);
     shuffleDeck(enemyDeck);
     console.log("Enemy deck:");
@@ -91,8 +93,9 @@ function disableClick() {
  */
 function drawCard() {
     hand = document.getElementById("player-hand");
-    card = `<div class="card" onclick="playCard(this)"><p>1</p></div>`;
+    card = `<div class="card" onclick="playCard(this)"><p>${playerDeck[0].points}</p></div>`;
     hand.insertAdjacentHTML("beforeend", card);
+    playerDeck.shift();
 }
 
 /**
