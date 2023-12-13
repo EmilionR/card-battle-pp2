@@ -11,6 +11,34 @@ function initGameState() {
 
 }
 
+function createCards() {
+
+}
+
+function initializeDecks() {
+
+}
+
+function shuffleDeck(deck) {
+
+}
+
+function initializeHands() {
+    
+}
+
+function startRound() {
+
+}
+
+function enableClick() {
+
+}
+
+function disableClick() {
+    
+}
+
 /**
  * Draw card into the selected hand
  */
