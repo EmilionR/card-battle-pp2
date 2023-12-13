@@ -16,6 +16,7 @@ initGameState();
 function initGameState() {
     console.log("Initializing game state")
     initializeDecks();
+    initializeHands();
 }
 
 /**
@@ -73,8 +74,15 @@ function shuffleDeck(deck) {
     }
 }
 
+/**
+ * Each player draws a starting hand
+ */
 function initializeHands() {
-    
+    console.log("Initializing hands")
+    for(let i = 0; i < handSize; i++){
+        drawCard("player");
+        drawCard("enemy");
+    }
 }
 
 function startRound() {
