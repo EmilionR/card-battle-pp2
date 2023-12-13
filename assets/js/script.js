@@ -3,6 +3,7 @@ let handSize = 4;
 let playerScore = 0;
 let enemyScore = 0;
 let baseCards = []
+let enemyDeck, playerDeck;
 
 createCards();
 initGameState();
@@ -13,6 +14,7 @@ initGameState();
  */
 function initGameState() {
     console.log("Initializing game state")
+    initializeDecks();
 }
 
 /**
@@ -22,7 +24,6 @@ function createCards() {
     for(let i = 1; i <= 9; i++){
         let baseCard = {
             points: i,
-            owner: ""
         }
         console.log("Creating card, value: " + baseCard.points)
         baseCards.push(baseCard)
@@ -32,7 +33,16 @@ function createCards() {
 }
 
 function initializeDecks() {
-
+    enemyDeck = [...baseCards];
+    playerDeck = [...baseCards];
+    console.log("Enemy deck:")
+    for(let i = 0; i < enemyDeck.length; i++){
+        console.log(enemyDeck[i]);
+    }
+    console.log("Player deck:")
+    for(let i = 0; i < playerDeck.length; i++){
+        console.log(playerDeck[i]);
+    }
 }
 
 function shuffleDeck(deck) {
