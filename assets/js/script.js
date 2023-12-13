@@ -188,6 +188,12 @@ function endOfRound() {
     document.getElementById("player-score").firstChild.textContent = playerScore;
     document.getElementById("enemy-score").firstChild.textContent = enemyScore;
     clearTable();
+    console.log("Cards in hand: " + document.getElementById("player-hand").childNodes.length)
+    if(document.getElementById("player-hand").childNodes.length > 0){
+        startRound();
+    } else {
+        gameOver();
+    }
 }
 
 function clearTable() {
@@ -198,5 +204,10 @@ function clearTable() {
 }
 
 function gameOver() {
-
+    console.log("Game over")
+    if(playerScore > enemyScore){
+        alert("You win! Congratulations!")
+    } else if(enemyScore > playerScore) {
+        alert("You lose. Better luck next time...")
+    }
 }
