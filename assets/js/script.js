@@ -201,7 +201,7 @@ function compareCards () {
         console.log("It's a draw!")
     }
     document.getElementById("test-button").classList.remove("flashing");
-    document.getElementById("test-button").setAttribute("onclick", "endOfRound()");
+    document.getElementById("test-button").setAttribute("onclick", "endOfTurn()");
 }
 
 /**Finish up turn and prepare for next turn */
@@ -217,6 +217,7 @@ function endOfTurn() {
     } else {
         gameOver();
     }
+    document.getElementById("test-button").setAttribute("onclick", "");
 }
 
 /**
