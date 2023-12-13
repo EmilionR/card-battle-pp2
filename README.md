@@ -14,6 +14,8 @@ The game offers a bit of variety in terms of difficulty and round length.
 
 ## Contents
 
+* [Development Process](#development-process)
+
 * [Features](#Features)
   * [Existing Features](#existing-features)
     * [Home page](#home-page)
@@ -43,6 +45,10 @@ The game offers a bit of variety in terms of difficulty and round length.
   * [Content](#Content)
   * [Media](#Media)
   * [Tutorials & Code Used](#tutorials--code-used)
+
+## Development Process
+
+The first challenge I encountered was creating a functional method for shuffling the decks. My first attempts gave poor results, with biased shuffling and ignored indices. After analyzing popular array randomizing functions such as the Fisher-Yates shuffle algorithm, I came up with a new solution that works as intended regardless of array size. 
 
 ## Features
 
