@@ -179,17 +179,24 @@ function compareCards () {
         console.log("It's a draw!")
     }
     document.getElementById("test-button").classList.remove("flashing");
-    document.getElementById("test-button").setAttribute("onclick", "startRound()");
+    document.getElementById("test-button").setAttribute("onclick", "endOfRound()");
 }
 
 function endOfRound() {
-
+    console.log("Player: " + playerScore + ", Enemy: " + enemyScore);
+    //Update score counters
+    document.getElementById("player-score").firstChild.textContent = playerScore;
+    document.getElementById("enemy-score").firstChild.textContent = enemyScore;
+    clearTable();
 }
 
 function clearTable() {
-
+    for(card in cardsOnTable){
+        cardsOnTable[card].remove();
+    }
+    cardsOnTable = [];
 }
 
 function gameOver() {
-    
+
 }
