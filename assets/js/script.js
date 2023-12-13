@@ -83,19 +83,30 @@ function initializeHands() {
         drawCard("player");
         drawCard("enemy");
     }
+    enableClick();
 }
 
 function newTurn() {
     drawCard("player")
     drawCard("enemy")
+    enableClick();
 }
 
 
 function enableClick() {
+    let hand = document.getElementById("player-hand");
+
+    for(let i = 0; i < hand.children.length; i++){
+        console.log(hand.children[i]);
+        hand.children[i].setAttribute("onclick", "playCard(this)");
+    }
 }
 
 function disableClick() {
-    
+    let hand = document.getElementById("player-hand");
+    for(let i = 0; i < hand.children.length; i++){
+        hand.children[i].setAttribute("onclick", "")
+    }
 }
 
 /**
@@ -114,7 +125,7 @@ function drawCard(whose) {
     //Check if deck still has cards
     if(deck.length > 0){
         //Create new card element in hand div
-        card = `<div class="card" points="${deck[0].points}" onclick="playCard(this)"><p>${deck[0].points}</p></div>`;
+        card = `<div class="card" points="${deck[0].points}"><p>${deck[0].points}</p></div>`;
         hand.insertAdjacentHTML("beforeend", card);
         deck.shift();
         console.log(deck.length + " cards left in deck;")
@@ -140,6 +151,7 @@ function playCard(card) {
     card.style.position = "absolute";
     card.style.transform = `translate(-40px, -175px) rotate(${randomSpin}deg)`
     cardsOnTable.push(card)
+    disableClick()
     enemyPlay()
 }
 
