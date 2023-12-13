@@ -156,3 +156,18 @@ a {
     margin: 200px;
     border-radius: 24px;
 }
+
+.flashing {
+    animation-name: flashing;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flashing {
+    from {
+        background-color: orange;
+    }
+    to {
+        background-color: blueviolet;
+    }
+}

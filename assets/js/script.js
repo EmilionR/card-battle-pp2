@@ -135,11 +135,13 @@ function playCard(card) {
 }
 
 function enemyPlay() {
+    let hand =  document.getElementById("enemy-hand")
+    //Choose a random card from hand
     console.log("enemy choosing card")
-    let chosenCard = document.getElementById("enemy-hand").children[0];
+    let randomCard = Math.floor(Math.random() * hand.children.length)
+    let chosenCard = hand.children[randomCard];
     console.log(chosenCard)
-    chosenCard.classList.remove("facedown");
-    chosenCard.setAttribute("active", "true")
+    //Play card to board
     chosenCard.style.position = "absolute";
     chosenCard.style.transform = `translate(40px, 175px)`
     cardsOnTable.push(chosenCard)
