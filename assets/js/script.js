@@ -16,7 +16,7 @@ initGameState();
 function initGameState() {
     console.log("Initializing game state")
     initializeDecks();
-    initializeHands();
+    newTurn();
 }
 
 /**
@@ -75,23 +75,25 @@ function shuffleDeck(deck) {
 }
 
 /**
- * Each player draws a starting hand
- */
-function initializeHands() {
-    console.log("Initializing hands")
-    for(let i = 0; i < handSize; i++){
-        drawCard("player");
-        drawCard("enemy");
-    }
-    enableClick();
-}
-
-/**
- * Start new turn, players draw cards
+ * Start new turn, players draw cards if possible
  */
 function newTurn() {
-    drawCard("player")
-    drawCard("enemy")
+    //Check if player has a full hand
+    while(document.getElementById("player-hand").children.length < handSize){
+        //Check if player has cards in deck
+        if(playerDeck.length > 0){
+            drawCard("player")
+        }
+        else{break;}
+    }
+    //Check if enemy has a full hand
+    while(document.getElementById("enemy-hand").children.length < handSize){
+        //Check if enemy has cards in deck
+        if(enemyDeck.length > 0){
+            drawCard("enemy")
+        }
+        else{break;}
+    }
     enableClick();
 }
 
