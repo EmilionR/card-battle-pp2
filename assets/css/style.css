@@ -256,18 +256,30 @@ select {
     font-size: 300%;
 }
 
-#game-container button {
-    position: fixed;
-    width: 90px;
-    height: 70px;
-    margin: 25% 20%;
-    border-radius: 24px;
-}
-
 .flashing {
     animation-name: flashing;
     animation-duration: 500ms;
     animation-iteration-count: infinite;
+}
+
+/* Game-over Modal */
+#game-modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--clr-white);
+    text-align: center;
+}
+
+#game-modal div {
+    position: relative;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes flashing {
@@ -353,4 +365,10 @@ select {
             gap: 4px;
         }
     }
+}
+
+/* UTILITY */
+
+.wrap-horiz {
+    display: flex;
 }
