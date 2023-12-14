@@ -154,6 +154,7 @@ Please refer to [TESTING.md](TESTING.md) for testing documentation.
 
 ### Solved Bugs
 
+1. There was a bug that would crash the site when initalizing the game on some browsers. I fixed it by storing certain variables in local storage rather than passing them between javascript files.
 
 ### Unfixed Bugs
 
@@ -168,5 +169,3 @@ All content is original.
 **Images used**
 
 ### Tutorials & Code Used
-
-
