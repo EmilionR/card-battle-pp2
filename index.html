@@ -17,7 +17,7 @@
             <div id="menu">
                 <button onclick="openHelp()">Help</button>
                 <a href="game.html">PLAY!</a>
-                <button>Settings</button>
+                <button onclick="openSeeings()">Settings</button>
             </div>
             <div id="info-screen">
                 <h3>How to play:</h3>
@@ -38,6 +38,20 @@
                         <p>4</p>
                     </div>
                 </div>
+                <button class="close-menu" onclick="closeMenu()">X</button>
+            </div>
+            <div id="settings-screen">
+                <h3>Settings</h3>
+                <div class="under-title"></div>
+                <select name="open-cards" id="open-cards">
+                    <option value="Open cards"></option>
+                    <option value="Hidden cards"></option>
+                </select>
+                <select name="deck-size" id="deck-size">
+                    <option value="9 cards"></option>
+                    <option value="18 cards"></option>
+                </select>
+                <button onclick="saveChanges()">Save changes</button>
                 <button class="close-menu" onclick="closeMenu()">X</button>
             </div>
         </main>

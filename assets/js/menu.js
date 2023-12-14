@@ -6,6 +6,11 @@ function openHelp(){
     document.getElementById("info-screen").style.display = "block";
 }
 
+function openSettings(){
+    //Make settings visible
+}
+
 function closeMenu() {
+    //Hide "how to play" window
     document.getElementById("info-screen").style.display = "none";
 }
