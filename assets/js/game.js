@@ -5,6 +5,9 @@ let enemyScore = 0;
 let baseCards = []
 let enemyDeck, playerDeck;
 let cardsOnTable = [];
+let deckSize = localStorage.getItem("deckSize");
+let enemyCards = localStorage.getItem("enemyCards");
+console.log(deckSize);
 
 createCards();
 initGameState();
@@ -26,7 +29,7 @@ function createCards() {
     //Create cards with values from 1 to 9
     for(let i = 1; i <= 9; i++){
         let baseCard = {
-            points: i,
+            points: i
         }
         //Put card into base card array
         console.log("Creating card, value: " + baseCard.points)
@@ -43,6 +46,10 @@ function initializeDecks() {
     //Create two clones of the base card deck
     enemyDeck = [...baseCards];
     playerDeck = [...baseCards];
+    if(deckSize == "double"){
+        enemyDeck = enemyDeck.concat(enemyDeck);
+        playerDeck = playerDeck.concat(playerDeck);
+    }
     //Shuffle each deck
     shuffleDeck(playerDeck);
     shuffleDeck(enemyDeck);

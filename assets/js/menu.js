@@ -28,9 +28,11 @@ function openSettings() {
  * Save settings in object
  */
 function saveChanges() {
-    gameSettings.deckSize = document.getElementById("deck-size").value;
-    gameSettings.enemyCards = document.getElementById("open-cards").value;
-    console.log(gameSettings.deckSize, gameSettings.enemyCards)
+    console.log(document.getElementById("deck-size").value);
+    console.log(document.getElementById("open-cards").value)
+    localStorage.setItem('deckSize', document.getElementById("deck-size").value);
+    localStorage.setItem('enemyCards', document.getElementById("open-cards").value);
+    
 }
 
 /**
