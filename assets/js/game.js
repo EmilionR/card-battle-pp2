@@ -7,6 +7,8 @@ let enemyDeck, playerDeck;
 let cardsOnTable = [];
 let deckSize = localStorage.getItem("deckSize");
 let enemyCards = localStorage.getItem("enemyCards");
+let wins = 0;
+let losses = 0;
 console.log(deckSize);
 
 createCards();
@@ -263,9 +265,13 @@ function clearTable() {
 function gameOver() {
     console.log("Game over")
     if(playerScore > enemyScore){
-        alert("You win! Congratulations!")
+        wins += 1;
+        document.getElementById("end-message").textContent = "You win!";
+        document.getElementById("wins").textContent = wins;
     } else if(enemyScore > playerScore) {
-        alert("You lose. Better luck next time...")
+        losses += 1;
+        document.getElementById("end-message").textContent = "You lose!";
+        document.getElementById("losses").textContent = losses;
     }
     showModal();
 }

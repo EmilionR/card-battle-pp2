@@ -28,11 +28,15 @@
             </div>
             <button id="test-button" onclick="compareCards()">Proceed</button>
             <div class="container" id="game-modal">
-                <h2>Game Over</h2>
+                <h2 id="end-message">Game Over</h2>
                 <p>Another game?</p>
                 <div class="container">
                     <button onclick="initGameState()">Yes</button>
                     <a href="index.html">No</a>
+                </div>
+                <div class="container">
+                    <p>Wins: <span id="wins">0</span></p>
+                    <p>Losses: <span id="losses">0</span></p>
                 </div>
             </div>
         </div>
