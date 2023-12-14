@@ -46,7 +46,9 @@ function initializeDecks() {
     //Create two clones of the base card deck
     enemyDeck = [...baseCards];
     playerDeck = [...baseCards];
+    //Check if double deck size is selected
     if(deckSize == "double"){
+        //Duplicate all cards in deck
         enemyDeck = enemyDeck.concat(enemyDeck);
         playerDeck = playerDeck.concat(playerDeck);
     }
@@ -141,8 +143,15 @@ function drawCard(whose) {
     }
     //Check if deck still has cards
     if(deck.length > 0){
-        //Create new card element in hand div
-        card = `<div class="card" points="${deck[0].points}"><p>${deck[0].points}</p></div>`;
+        //Make facedown card if hidden cards is chosen
+        if(whose == "enemy" && enemyCards == "hidden"){
+            card = `<div class="card facedown" points="${deck[0].points}"></div>`;
+        }
+        //Otherwise, make normal card face
+        else {
+            card = `<div class="card" points="${deck[0].points}"><p>${deck[0].points}</p></div>`;
+        }
+        //Add new card element in hand div
         hand.insertAdjacentHTML("beforeend", card);
         deck.shift();
         console.log(deck.length + " cards left in deck;")
