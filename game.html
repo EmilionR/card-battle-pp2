@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +9,42 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div id="game-container">
-        <div id="decks-wrapper">
-            <div class="deck" id="enemy-deck" onclick="drawCard('enemy')"></div>
-            <div class="deck" id="player-deck" onclick="drawCard('player')"></div>
-        </div>
-        <div class="hand" id="enemy-hand"></div>
-        <div id="playing-area">
-        </div>
-        <div class="hand" id="player-hand"></div>
-        <div id="scores-wrapper">
-            <div id="enemy-score"><p>0</p></div>
-            <div id="player-score"><p>0</p></div>
-        </div>
-        <button id="test-button" onclick="compareCards()">Proceed</button>
-        <div class="container" id="game-modal">
-            <h2>Game Over</h2>
-            <p>Another game?</p>
-            <div class="container">
-                <button onclick="initGameState()">Yes</button>
-                <a href="index.html">No</a>
+    <header>
+        <h1><a href="index.html">Card Battle</a></h1>
+    </header>
+    <main>
+        <div id="game-container">
+            <div id="decks-wrapper">
+                <div class="deck" id="enemy-deck" onclick="drawCard('enemy')"></div>
+                <div class="deck" id="player-deck" onclick="drawCard('player')"></div>
+            </div>
+            <div class="hand" id="enemy-hand"></div>
+            <div id="playing-area">
+            </div>
+            <div class="hand" id="player-hand"></div>
+            <div id="scores-wrapper">
+                <div id="enemy-score">
+                    <p>0</p>
+                </div>
+                <div id="player-score">
+                    <p>0</p>
+                </div>
+            </div>
+            <button id="test-button" onclick="compareCards()">Proceed</button>
+            <div class="container" id="game-modal">
+                <h2>Game Over</h2>
+                <p>Another game?</p>
+                <div class="container">
+                    <button onclick="initGameState()">Yes</button>
+                    <a href="index.html">No</a>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer>
+
+    </footer>
     <script src="assets/js/game.js"></script>
 </body>
+
 </html>
