@@ -19,6 +19,7 @@ The game offers a bit of variety in terms of difficulty and round length.
 * [Features](#Features)
   * [Existing Features](#existing-features)
     * [Home page](#home-page)
+    * [Game page](#game-page)
   * [Future Implementations](#future-implementations)
 
 * [User Experience](#User-Experience)
@@ -58,7 +59,7 @@ Throughout the process, I've refactored functions to make them as flexible and n
 
 ## Features
 
-
+The site has two pages, one for the main menu and one for the game itself.
 
 ### Existing Features
 
@@ -66,38 +67,42 @@ Throughout the process, I've refactored functions to make them as flexible and n
 ![Home page]()
 __The home page has:__
 
+At the main menu, the player can change game settings and open a help window with information about how to play the game.
+
+The settings page lets users adjust the game length and difficulty as well as choose the look of the cards.
+
 #### Game Page:
 ![Game page]()
 __The Game page has:__
 
-#### Settings Page:
-![Settings page]()
-__The settings page has:__
+The game lets the users select cards to play, and the computer plays cards in return. Scores are kept and the game can be repeated or terminated when the player wins or loses.
+Animations keep the interest up and lets the player know what to click next.
 
 ### Future Implementations:
 
 ## User Experience
 
-__Key information for the site__
-
-
 ### User stories
-
-__Client goals__
 
 __First-time visitor goals__
 
+* I want to play a fun and casual game without any hassle
+* I want to navigate the page with ease
+* I want to enjoy this game on any device
+* I want clear information about how to play the game
 
 __Returning visitor goals__
 
+* I want to add variety to the game
+* I want to keep track of my wins and losses
 
 ## Design
 
 ### Color palette
 
-![Color Palette](pp2-colors.png)
+![Color Palette](documentation/pp2-colors.png)
 
-I have made a color pallette that draws inspiration from a traditional deck of playing cards.
+I have made a color palette that draws inspiration from a traditional deck of playing cards. The palette is adjusted for good contrast.
 
 ### Typography
 
@@ -106,7 +111,7 @@ I have made a color pallette that draws inspiration from a traditional deck of p
 
 ### Wireframe
 
-![Wireframe]()
+![Wireframe](documentation/pp2-wireframe.png)
 
 ### Accessibility
 
