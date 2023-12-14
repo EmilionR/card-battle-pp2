@@ -24,6 +24,10 @@ body {
     overflow: hidden;
 }
 
+main {
+    height: 100%;
+}
+
 h2,
 h3 {
     font-family: sans-serif;
@@ -70,26 +74,29 @@ button:hover {
 /* MAIN MENU */
 
 #menu-screen {
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     background-color: var(--clr-light);
-    height: 100%;
-    gap: 70px;
+    padding: 10%;
+    gap: 10px;
 }
 
 #menu {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
     margin-bottom: 100px;
 }
 
 #under-title {
-    height: 50%;
+    width: 50%;
+    height: 50px;
     background-color: var(--clr-black);
+    margin-bottom: 20px;
 }
 
 /* "How to play" & "Settings" */
@@ -117,9 +124,12 @@ button:hover {
     background-color: transparent;
     border: 1px solid var(--clr-white);
     outline: none;
-    font-size: 300%;
+    font-size: 200%;
     font-weight: 700;
     border-radius: 12px;
+    width: 45px;
+    height: 45px;
+    line-height: 1rem;
 }
 
 /* How to play */
