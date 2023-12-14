@@ -35,8 +35,7 @@ h2 {
     font-size: 600%;
 }
 
-p,
-a {
+p, a, label {
     font-family: sans-serif;
     font-size: 150%;
 }
@@ -79,7 +78,8 @@ a {
 }
 
 /* "How to play" modal */
-#info-screen {
+#info-screen,
+#settings-screen {
     position: fixed;
     background-color: #262626;
     color: var(--clr-white);

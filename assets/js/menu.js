@@ -1,16 +1,26 @@
+//Menu screen that is open
+let openMenu;
+
 /**
  * Open "how to play" modal
  */
-function openHelp(){
+function openHelp() {
     //Make "how to play" visible
-    document.getElementById("info-screen").style.display = "block";
+    openMenu = document.getElementById("info-screen");
+    openMenu.style.display = "block";
 }
 
-function openSettings(){
+function openSettings() {
     //Make settings visible
+    openMenu = document.getElementById("settings-screen")
+    openMenu.style.display = "block";
+}
+
+function saveChanges() {
+    //Save and apply settings
 }
 
 function closeMenu() {
     //Hide "how to play" window
-    document.getElementById("info-screen").style.display = "none";
+    openMenu.style.display = "none";
 }
