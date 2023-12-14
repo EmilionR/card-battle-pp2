@@ -262,12 +262,12 @@ function clearTable() {
 /** End game and display win/lose message */
 function gameOver() {
     console.log("Game over")
-    showModal();
     if(playerScore > enemyScore){
         alert("You win! Congratulations!")
     } else if(enemyScore > playerScore) {
         alert("You lose. Better luck next time...")
     }
+    showModal();
 }
 
 /**

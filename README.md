@@ -10,7 +10,7 @@ The goal is to predict the opponent's move and choose the right card to go highe
 
 The game offers a bit of variety in terms of difficulty and round length.
 
-[View the website here]()
+[View the website here](https://emilionr.github.io/card-battle-pp2/)
 
 ## Contents
 
@@ -48,9 +48,17 @@ The game offers a bit of variety in terms of difficulty and round length.
 
 ## Development Process
 
-The first challenge I encountered was creating a functional method for shuffling the decks. My first attempts gave poor results, with biased shuffling and ignored indices. After analyzing popular array randomizing functions such as the Fisher-Yates shuffle algorithm, I came up with a new solution that works as intended regardless of array size. 
+I came up with the idea of the game and a general approach for how to make it, making sure to leave space in the planning to figure out new aspects of javascript required to make it work.
+
+The first challenge I encountered was creating a functional method for shuffling the decks. My first attempts gave poor results, with biased shuffling and ignored indices. After analyzing popular array randomizing functions such as the Fisher-Yates shuffle algorithm, I came up with a new solution that works as intended regardless of array size.
+
+Another hurdle I had to overcome was handling the data given by the user and making it persist. I chose to use local storage for this, rather than exporting js modules or lumping everything together in a huge tangle of code.
+
+Throughout the process, I've refactored functions to make them as flexible and non-repetitive as I can. If I want to change the number of cards in hand, the card values, or even the game rules - I can do so by simply changing one or two variables without anything breaking.
 
 ## Features
+
+
 
 ### Existing Features
 

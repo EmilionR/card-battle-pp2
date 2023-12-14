@@ -41,7 +41,6 @@ a,
 label {
     font-family: sans-serif;
     font-size: 150%;
-    color: var(--clr-black);
 }
 
 a:link, a:visited {
