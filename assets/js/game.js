@@ -238,8 +238,8 @@ function compareCards () {
 function endOfTurn() {
     console.log("Player: " + playerScore + ", Enemy: " + enemyScore);
     //Update score counters
-    document.getElementById("player-score").firstChild.textContent = playerScore;
-    document.getElementById("enemy-score").firstChild.textContent = enemyScore;
+    document.getElementById("player-score").textContent = playerScore;
+    document.getElementById("enemy-score").textContent = enemyScore;
     clearTable();
     console.log("Cards in hand: " + document.getElementById("player-hand").childNodes.length)
     if(document.getElementById("player-hand").childNodes.length > 0){
