@@ -24,7 +24,8 @@ body {
     overflow: hidden;
 }
 
-h2, h3 {
+h2,
+h3 {
     font-family: sans-serif;
     text-align: center;
     margin: 0 auto;
@@ -35,7 +36,9 @@ h2 {
     font-size: 600%;
 }
 
-p, a, label {
+p,
+a,
+label {
     font-family: sans-serif;
     font-size: 150%;
 }
@@ -60,7 +63,7 @@ p, a, label {
     margin-bottom: 100px;
 }
 
-#menu > * {
+#menu>* {
     width: 100px;
     flex: none;
     line-height: 150%;
@@ -77,10 +80,12 @@ p, a, label {
     background-color: var(--clr-black);
 }
 
-/* "How to play" modal */
+/* "How to play" & "Settings" */
 #info-screen,
 #settings-screen {
     position: fixed;
+    flex-direction: column;
+    align-items: center;
     background-color: #262626;
     color: var(--clr-white);
     left: 0;
@@ -90,18 +95,6 @@ p, a, label {
     padding: 10% 20%;
     text-align: center;
     display: none;
-}
-
-#menu-cards {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-    margin: 5px;
-}
-
-#menu-cards p {
-    color: #262626;
 }
 
 .close-menu {
@@ -115,6 +108,43 @@ p, a, label {
     font-size: 300%;
     font-weight: 700;
     border-radius: 12px;
+}
+
+/* How to play */
+#menu-cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin: 5px;
+}
+
+/* Settings */
+
+#settings-screen * {
+    margin-top: 10px;
+}
+
+select {
+    height: 30px;
+    width: 120px;
+    border-radius: 24px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#save-button {
+    height: 50px;
+    width: 150px;
+    border-radius: 24px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#dropdowns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* GAME */
@@ -252,6 +282,7 @@ p, a, label {
 
 @media screen and (min-width: 480px) {
 
+    /* GAME */
     .hand {
         gap: 25px;
     }
@@ -273,7 +304,7 @@ p, a, label {
             height: 90px;
             width: 60px;
         }
-    
+
         #scores-wrapper {
             padding: 1% 5px;
             justify-content: center;
@@ -284,6 +315,8 @@ p, a, label {
 }
 
 @media screen and (min-width: 768px) {
+
+    /* GAME */
 
     #decks-wrapper {
         justify-content: space-between;
@@ -313,7 +346,7 @@ p, a, label {
             height: 100px;
             width: 60px;
         }
-    
+
         #scores-wrapper {
             padding: 1% 5px;
             justify-content: center;

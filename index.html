@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Card Battle!</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <div id="menu-screen">
         <header>
@@ -43,17 +45,19 @@
             <div id="settings-screen">
                 <h3>Settings</h3>
                 <div class="under-title"></div>
-                <label for="open-cards">Enemy cards</label>
-                <select name="open-cards" id="open-cards">
-                    <option value="open-cards">Open cards</option>
-                    <option value="hide-cards">Hidden cards</option>
-                </select>
-                <label for="deck-size">Deck size</label>
-                <select name="deck-size" id="deck-size">
-                    <option value="9-card">9 cards</option>
-                    <option value="18-card">18 cards</option>
-                </select>
-                <button onclick="saveChanges()">Save changes</button>
+                <div id="dropdowns">
+                    <label for="open-cards">Enemy cards</label>
+                    <select name="open-cards" id="open-cards">
+                        <option value="open-cards">Open cards</option>
+                        <option value="hide-cards">Hidden cards</option>
+                    </select>
+                    <label for="deck-size">Deck size</label>
+                    <select name="deck-size" id="deck-size">
+                        <option value="9-card">9 cards</option>
+                        <option value="18-card">18 cards</option>
+                    </select>
+                </div>
+                <button id="save-button" onclick="saveChanges()">Save changes</button>
                 <button class="close-menu" onclick="closeMenu()">X</button>
             </div>
         </main>
@@ -62,4 +66,5 @@
     </div>
     <script src="assets/js/menu.js"></script>
 </body>
+
 </html>

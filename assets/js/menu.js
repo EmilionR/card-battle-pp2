@@ -7,13 +7,13 @@ let openMenu;
 function openHelp() {
     //Make "how to play" visible
     openMenu = document.getElementById("info-screen");
-    openMenu.style.display = "block";
+    openMenu.style.display = "flex";
 }
 
 function openSettings() {
     //Make settings visible
     openMenu = document.getElementById("settings-screen")
-    openMenu.style.display = "block";
+    openMenu.style.display = "flex";
 }
 
 function saveChanges() {
