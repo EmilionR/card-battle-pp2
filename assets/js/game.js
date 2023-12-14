@@ -173,7 +173,7 @@ function drawCard(whose) {
  * Play the selected card to the board
  */
 function playCard(card) {
-    let randomSpin = Math.floor(Math.random()* 50)
+    let randomSpin = Math.floor(Math.random()* 100 - 50)
     card.style.position = "absolute";
     card.style.transform = `translate(-40px, -175px) rotate(${randomSpin}deg)`
     cardsOnTable.push(card)
@@ -184,14 +184,20 @@ function playCard(card) {
 /**Enemy chooses a card and plays it to the board */
 function enemyPlay() {
     let hand =  document.getElementById("enemy-hand")
+    let randomSpin = Math.floor(Math.random()* 100 - 50)
     //Choose a random card from hand
     console.log("enemy choosing card")
     let randomCard = Math.floor(Math.random() * hand.children.length)
     let chosenCard = hand.children[randomCard];
     console.log(chosenCard)
+    //If card is facing away, turn it around
+    if(chosenCard.classList.contains("facedown")){
+        chosenCard.classList.remove("facedown");
+        chosenCard.innerHTML = `<p>${chosenCard.getAttribute("points")}</p>`;
+    }
     //Play card to board
     chosenCard.style.position = "absolute";
-    chosenCard.style.transform = `translate(40px, 175px)`
+    chosenCard.style.transform = `translate(40px, 175px) rotate(${randomSpin}deg)`
     cardsOnTable.push(chosenCard)
     document.getElementById("test-button").classList.add("flashing");
     document.getElementById("test-button").setAttribute("onclick", "compareCards()");
