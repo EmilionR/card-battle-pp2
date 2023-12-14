@@ -17,7 +17,12 @@ initGameState();
  * create base classes & reset relevant variables
  */
 function initGameState() {
-    console.log("Initializing game state")
+    playerScore = 0;
+    enemyScore = 0;
+    hideModal();
+    document.getElementById("player-deck").style.visibility = "visible";
+    document.getElementById("enemy-deck").style.visibility = "visible";
+    console.log("Initializing game state");
     initializeDecks();
     newTurn();
 }
@@ -184,11 +189,11 @@ function playCard(card) {
 
 /**Enemy chooses a card and plays it to the board */
 function enemyPlay() {
-    let hand =  document.getElementById("enemy-hand")
-    let randomSpin = Math.floor(Math.random()* 100 - 50)
+    let hand =  document.getElementById("enemy-hand");
+    let randomSpin = Math.floor(Math.random()* 100 - 50);
     //Choose a random card from hand
-    console.log("enemy choosing card")
-    let randomCard = Math.floor(Math.random() * hand.children.length)
+    console.log("enemy choosing card");
+    let randomCard = Math.floor(Math.random() * hand.children.length);
     let chosenCard = hand.children[randomCard];
     console.log(chosenCard)
     //If card is facing away, turn it around
@@ -202,7 +207,6 @@ function enemyPlay() {
     chosenCard.style.transform = `translate(40px, 175px) rotate(${randomSpin}deg)`;
     cardsOnTable.push(chosenCard);
     document.getElementById("test-button").classList.add("flashing");
-    document.getElementById("test-button").setAttribute("onclick", "compareCards()");
 }
 
 /**
@@ -227,7 +231,7 @@ function compareCards () {
         console.log("It's a draw!")
     }
     document.getElementById("test-button").classList.remove("flashing");
-    document.getElementById("test-button").setAttribute("onclick", "endOfTurn()");
+    endOfTurn();
 }
 
 /**Finish up turn and prepare for next turn */
@@ -243,7 +247,6 @@ function endOfTurn() {
     } else {
         gameOver();
     }
-    document.getElementById("test-button").setAttribute("onclick", "");
 }
 
 /**
@@ -259,9 +262,24 @@ function clearTable() {
 /** End game and display win/lose message */
 function gameOver() {
     console.log("Game over")
+    showModal();
     if(playerScore > enemyScore){
         alert("You win! Congratulations!")
     } else if(enemyScore > playerScore) {
         alert("You lose. Better luck next time...")
     }
+}
+
+/**
+ * Reveal the game over modal
+ */
+function showModal() {
+    document.getElementById("game-modal").style.display = "flex";
+}
+
+/**
+ * Hide the game over modal
+ */
+function hideModal() {
+    document.getElementById("game-modal").style.display = "none";
 }
