@@ -31,7 +31,7 @@ body {
 }
 
 header {
-    height: 50px;
+    height: 20px;
     background-color: var(--clr-red);
     margin-top: 0;
     vertical-align: middle;
@@ -39,17 +39,22 @@ header {
 
 footer {
     width: 100%;
-    height: 32px;
+    height: 16px;
     background-color: var(--clr-red);
     position: fixed;
     bottom: 0;
-    font-size: 50%;
+    font-size: 40%;
     text-align: right;
     padding-right: 20px;
+    margin-top: 0;
+}
+
+footer > * {
+    margin: 0;
 }
 
 h1 {
-    font-size: 130%;
+    font-size: 75%;
     margin: 0;
     padding-left: 20px;
 }
@@ -78,12 +83,13 @@ label {
     font-size: 150%;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
     color: var(--clr-black);
 }
 
 button,
-#menu > a,
+#menu>a,
 #game-modal a {
     width: 100px;
     flex: none;
@@ -200,7 +206,7 @@ select {
 /* GAME */
 
 main {
-    height: 90%;
+    height: 95%;
 }
 
 #game-container {
@@ -209,14 +215,14 @@ main {
     background-color: var(--clr-light);
     width: 100%;
     height: 100%;
-    padding: 30px;
+    padding: 10px 10px 30px;
     align-items: stretch;
     justify-content: space-between;
     gap: 10px;
 }
 
 #playing-area {
-    flex-grow: 2;
+    flex-grow: 1.5;
 }
 
 .hand {
@@ -225,8 +231,8 @@ main {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    padding: 10px;
-    height: 25%;
+    padding: 4px;
+    height: 15%;
     gap: 4px;
     align-items: center;
     margin: 5px;
@@ -248,13 +254,13 @@ main {
 
 .card,
 .deck {
-    height: 80px;
-    width: 50px;
+    height: 50px;
+    width: 30px;
     flex: none;
     border-radius: 4px;
     text-align: center;
-    font-weight: 600;
-    font-size: 150%;
+    font-weight: 400;
+    font-size: 90%;
     position: relative;
 }
 
@@ -282,6 +288,7 @@ main {
         transform: rotateY(88deg);
 
     }
+
     90% {
         transform: rotateY(0deg);
     }
@@ -306,7 +313,7 @@ main {
     height: 80%;
     align-items: center;
     margin: 5px;
-    font-size: 200%;
+    font-size: 100%;
 }
 
 .flashing {
@@ -316,7 +323,7 @@ main {
 }
 
 /* Game-over Modal */
-#game-modal{
+#game-modal {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -355,33 +362,24 @@ main {
 @media screen and (min-width: 480px) {
 
     /* GAME */
+
+    #game-container {
+        padding: 30px 10px 40px;
+    }
+
     .hand {
         gap: 25px;
+        padding: 10px;
     }
 
     .card,
     .deck {
-        height: 110px;
-        width: 70px;
+        height: 80px;
+        width: 50px;
     }
 
-    @media (max-height: 480px) {
-
-        .hand {
-            gap: 5px;
-        }
-
-        .card,
-        .deck {
-            height: 90px;
-            width: 60px;
-        }
-
-        #scores-wrapper {
-            padding: 1% 5px;
-            justify-content: center;
-            gap: 4px;
-        }
+    #scores-wrapper {
+        font-size: 200%
     }
 
 }
@@ -401,6 +399,7 @@ main {
 
     .hand {
         gap: 12px;
+        height: 25%;
     }
 
     .card,
@@ -417,33 +416,81 @@ main {
             right: -30%;
             top: 0%;
             transform: rotateY(88deg);
-    
+
         }
-    
+
         90% {
             transform: rotateY(0deg);
         }
-    
+
         to {
             right: 0%;
             top: 0%;
         }
     }
+     
+    @media screen and (min-height: 480px) {
 
-    @media (max-height: 480px) {
-
-        .card,
-        .deck {
-            height: 100px;
-            width: 60px;
+        header {
+            height: 50px;
         }
 
-        #scores-wrapper {
-            padding: 1% 5px;
-            justify-content: center;
-            gap: 4px;
+        footer {
+            height: 32px;
+        }
+        h1 {
+            font-size: 130%;
+        }
+
+        #game-container {
+            padding: 30px 10px 70px;
         }
     }
+}
+
+@media (max-height: 480px) {
+
+    .header {
+        height: 20px;
+    }
+
+    .footer {
+        height: 16px;
+    }
+
+    .hand {
+        height: 25%;
+        gap: 5px;
+    }
+
+    #scores-wrapper {
+        padding: 1% 5px;
+        justify-content: center;
+        gap: 4px;
+        font-size: 100%;
+    }
+
+    .card,
+    .deck {
+        height: 80px;
+        width: 50px;
+        font-size: 90%;
+    }
+
+    #scores-wrapper {
+        padding: 1% 5px;
+        justify-content: center;
+        gap: 4px;
+        font-size: 100%;
+    }
+
+    #decks-wrapper {
+        height: 60%;
+        justify-content: center;
+        padding-top: 0;
+        gap: 2px;
+    }
+
 }
 
 /* UTILITY */
