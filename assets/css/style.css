@@ -223,19 +223,19 @@ select {
     cursor: pointer;
 }
 
-#cardback-1 {
+.cardback-1 {
     background: url(../images/cardback-1.png) no-repeat center center/cover;
 }
 
-#cardback-2 {
+.cardback-2 {
     background: url(../images/cardback-2.png) no-repeat center center/cover;
 }
 
-#cardback-3 {
+.cardback-3 {
     background: url(../images/cardback-3.png) no-repeat center center/cover;
 }
 
-#cardback-4 {
+.cardback-4 {
     background: url(../images/cardback-4.png) no-repeat center center/cover;
 }
 
@@ -298,22 +298,17 @@ main {
     font-weight: 400;
     font-size: 90%;
     position: relative;
+    border: 3px solid var(--clr-black);
+
 }
 
 .card {
     position: relative;
     background-color: var(--clr-white);
-    border: 3px solid var(--clr-black);
     transition: all 200ms linear;
     animation-duration: 500ms;
     animation-name: drawCard;
     animation-timing-function: linear;
-}
-
-.deck,
-.facedown {
-    background: url(../images/cardback-2.png) no-repeat center center/cover;
-    border: 3px solid var(--clr-black);
 }
 
 @keyframes drawCard {

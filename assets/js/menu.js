@@ -43,5 +43,5 @@ function closeMenu() {
 }
 
 function chooseCardback(choice) {
-    localStorage.setItem('cardBack', choice.getAttribute("id"));
+    localStorage.setItem('cardBack', choice.getAttribute("class"));
 }
