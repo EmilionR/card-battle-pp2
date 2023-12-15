@@ -149,9 +149,10 @@ button:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    padding: 10% 20%;
+    padding: 5% 20%;
     text-align: center;
     display: none;
+    z-index: 40;
 }
 
 .close-menu {
@@ -180,7 +181,6 @@ button:hover {
 }
 
 /* Settings */
-
 #settings-screen * {
     margin-top: 10px;
 }
@@ -202,6 +202,36 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#cardback-choice {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-row-gap: 4px;
+    grid-column-gap: 8px;
+}
+
+#cardback-choice > * {
+    height: 80px;
+    width: 50px;
+    border: 1px solid var(--clr-red);
+}
+
+#cardback1 {
+    background: url(../images/cardback-1.png) no-repeat center center/cover;
+}
+
+#cardback2 {
+    background: url(../images/cardback-2.png) no-repeat center center/cover;
+}
+
+#cardback3 {
+    background: url(../images/cardback-3.png) no-repeat center center/cover;
+}
+
+#cardback4 {
+    background: url(../images/cardback-4.png) no-repeat center center/cover;
 }
 
 /* GAME */

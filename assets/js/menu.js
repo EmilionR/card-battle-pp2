@@ -32,7 +32,7 @@ function saveChanges() {
     console.log(document.getElementById("open-cards").value)
     localStorage.setItem('deckSize', document.getElementById("deck-size").value);
     localStorage.setItem('enemyCards', document.getElementById("open-cards").value);
-    
+    closeMenu(openMenu)
 }
 
 /**
