@@ -143,10 +143,32 @@ Web Disability Simulator - To check accessibility.
 
 ## Deployment
 
-The page was deployed with GitHub Pages, using the following procedure:
-1. First, go to the Settings tab of this repository.
-2. Select the Master branch from the source section dropdown menu.
-3. The page automatically refreshes and confirms the successful deployment.ment
+The site is deployed using GitHub Pages
+
+To Deploy the site using GitHub Pages:
+
+1. Sign in to Github.
+2. Go to the project repository, [EmilionR/card-battle-pp2](https://github.com/EmilionR/card-battle-pp2/commits/main/).
+3. Click the settings button.
+4. In the left sidebar, select "pages".
+5. From the source dropdown select main branch and click save.
+6. The site is now deployed, although it might take a few minutes before the site is live.
+
+### Local Development
+
+#### How to Fork the repository
+
+1. Sign in to GitHub.
+2. Go to the repository for this project, [EmilionR/card-battle-pp2](https://github.com/EmilionR/card-battle-pp2/commits/main/)
+3. Click the Fork button in the top right corner.
+
+### How to Clone the repository
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, [EmilionR/card-battle-pp2](https://github.com/EmilionR/card-battle-pp2/commits/main/)
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 ## Testing
 
