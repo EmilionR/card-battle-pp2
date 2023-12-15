@@ -212,25 +212,30 @@ select {
     grid-column-gap: 8px;
 }
 
-#cardback-choice > * {
+#cardback-choice > div {
     height: 80px;
     width: 50px;
     border: 1px solid var(--clr-red);
 }
 
-#cardback1 {
+#cardback-choice > div:hover {
+    box-shadow: 0 0 10px var(--clr-blue);
+    cursor: pointer;
+}
+
+#cardback-1 {
     background: url(../images/cardback-1.png) no-repeat center center/cover;
 }
 
-#cardback2 {
+#cardback-2 {
     background: url(../images/cardback-2.png) no-repeat center center/cover;
 }
 
-#cardback3 {
+#cardback-3 {
     background: url(../images/cardback-3.png) no-repeat center center/cover;
 }
 
-#cardback4 {
+#cardback-4 {
     background: url(../images/cardback-4.png) no-repeat center center/cover;
 }
 

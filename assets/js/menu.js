@@ -41,3 +41,7 @@ function saveChanges() {
 function closeMenu() {
     openMenu.style.display = "none";
 }
+
+function chooseCardback(choice) {
+    localStorage.setItem('cardBack', choice.getAttribute("id"));
+}

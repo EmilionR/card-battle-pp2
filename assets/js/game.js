@@ -7,6 +7,8 @@ let enemyDeck, playerDeck;
 let cardsOnTable = [];
 let deckSize = localStorage.getItem("deckSize");
 let enemyCards = localStorage.getItem("enemyCards");
+let cardBack = localStorage.getItem("cardBack");
+console.log(cardBack);
 let wins = 0;
 let losses = 0;
 console.log(deckSize);
