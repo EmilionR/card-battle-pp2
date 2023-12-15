@@ -190,4 +190,6 @@ All content is original.
 
 **Images used**
 
+main-bg.jpg - Royalty free  [photo by Zoran Kokanovic](https://unsplash.com/photos/silhouette-photo-of-mountains-surrounded-by-fogs-GJYQfEfRpSg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash
+
 ### Tutorials & Code Used

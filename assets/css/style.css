@@ -4,7 +4,7 @@
     --clr-red: #b3001b;
     --clr-blue: #7ea3cc;
     --clr-tan: #ccad8f;
-    --clr-light: #cedff3;
+    --clr-light: hsl(212, 61%, 88%);
     --clr-white: #eeeeee;
 }
 
@@ -111,6 +111,7 @@ button:hover {
 /* MAIN MENU */
 
 #menu-screen {
+    background: url(../images/main-bg.jpg) no-repeat center center/cover;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
@@ -276,8 +277,8 @@ main {
 
 .deck,
 .facedown {
-    background-color: var(--clr-tan);
-    border: 3px solid var(--clr-red);
+    background: url(../images/cardback-2.png) no-repeat center center/cover;
+    border: 3px solid var(--clr-black);
 }
 
 @keyframes drawCard {
