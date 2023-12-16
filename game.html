@@ -13,20 +13,28 @@
         <h1><a href="index.html">Card Battle</a></h1>
     </header>
     <main>
+        <!-- Wrap all game content in a container -->
         <div id="game-container">
             <div id="decks-wrapper">
                 <div class="deck facedown" id="enemy-deck" onclick="drawCard('enemy')"></div>
                 <div class="deck facedown" id="player-deck" onclick="drawCard('player')"></div>
             </div>
+            <!-- Opponent's cards in hand.
+                I leave this div closed on one line to avoid parsing
+                the newline as content when inserting new html -->
             <div class="hand" id="enemy-hand"></div>
             <div id="playing-area">
             </div>
+            <!-- Player's cards in hand.
+                I leave this div closed on one line to avoid parsing
+                the newline as content when inserting new html -->
             <div class="hand" id="player-hand"></div>
             <div id="scores-wrapper">
                     <p id="enemy-score">0</p>
                     <p id="player-score">0</p>
             </div>
             <button id="test-button" onclick="compareCards()">Proceed</button>
+            <!-- Display "Game Over" modal -->
             <div class="container" id="game-modal">
                 <h2 id="end-message">Game Over</h2>
                 <p>Another game?</p>
@@ -34,6 +42,7 @@
                     <button onclick="initGameState()">Yes</button>
                     <a href="index.html">No</a>
                 </div>
+                <!-- Count wins and losses -->
                 <div class="container">
                     <p>Wins: <span id="wins">0</span></p>
                     <p>Losses: <span id="losses">0</span></p>
