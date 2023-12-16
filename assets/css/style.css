@@ -49,7 +49,7 @@ footer {
     margin-top: 0;
 }
 
-footer > * {
+footer>* {
     margin: 0;
 }
 
@@ -69,18 +69,21 @@ h3 {
     font-family: sans-serif;
     text-align: center;
     margin: 0 auto;
-    font-size: 200%;
 }
 
 h2 {
-    font-size: 600%;
+    font-size: 300%;
+}
+
+h3 {
+    font-size: 200%;
 }
 
 p,
 a,
 label {
     font-family: sans-serif;
-    font-size: 150%;
+    font-size: 100%;
 }
 
 a:link,
@@ -93,7 +96,6 @@ button,
 #game-modal a {
     width: 100px;
     flex: none;
-    line-height: 150%;
     padding: 10px;
     background-color: var(--clr-red);
     text-align: center;
@@ -101,6 +103,7 @@ button,
     border-radius: 25px;
     text-decoration: none;
     font-size: 18px;
+    line-height: 150%;
     text-shadow: 0 0 10px var(--clr-white);
 }
 
@@ -171,31 +174,22 @@ button:hover {
     line-height: 1rem;
 }
 
-/* How to play */
-#menu-cards {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-    margin: 5px;
-}
-
 /* Settings */
 #settings-screen * {
-    margin-top: 10px;
+    margin-top: 4px;
 }
 
 select {
-    height: 30px;
+    height: 20px;
     width: 120px;
     border-radius: 24px;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 #save-button {
-    height: 50px;
-    width: 150px;
+    height: 30px;
+    width: 110px;
 }
 
 #dropdowns {
@@ -212,13 +206,13 @@ select {
     grid-column-gap: 8px;
 }
 
-#cardback-choice > div {
+#cardback-choice>div {
     height: 80px;
     width: 50px;
     border: 1px solid var(--clr-red);
 }
 
-#cardback-choice > div:hover {
+#cardback-choice>div:hover {
     box-shadow: 0 0 10px var(--clr-blue);
     cursor: pointer;
 }
@@ -393,8 +387,16 @@ main {
 
 @media screen and (min-width: 480px) {
 
-    /* GAME */
+    h2 {
+        font-size: 600%;
+    }
 
+    #save-button {
+        height: 50px;
+        width: 150px;
+    }
+
+    /* GAME */
     #game-container {
         padding: 30px 10px 40px;
     }
@@ -418,8 +420,13 @@ main {
 
 @media screen and (min-width: 768px) {
 
-    /* GAME */
+    /* MENU */
+    #cardback-choice {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr;
+    }
 
+    /* GAME */
     #decks-wrapper {
         justify-content: space-between;
     }
@@ -460,7 +467,7 @@ main {
             top: 0%;
         }
     }
-     
+
     @media screen and (min-height: 480px) {
 
         header {
@@ -470,10 +477,33 @@ main {
         footer {
             height: 32px;
         }
+
+        p,
+        a,
+        label {
+            font-family: sans-serif;
+            font-size: 150%;
+        }
+
         h1 {
             font-size: 130%;
         }
 
+        /* MENU */
+
+        #settings-screen * {
+            margin-top: 8px;
+        }
+
+        select {
+            height: 30px;
+            width: 120px;
+            border-radius: 24px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* GAME */
         #game-container {
             padding: 30px 10px 70px;
         }
@@ -481,6 +511,14 @@ main {
 }
 
 @media screen and (max-height: 480px) {
+
+    h2 {
+        font-size: 300%;
+    }
+
+    h3 {
+        font-size: 120%;
+    }
 
     .header {
         height: 20px;
@@ -490,6 +528,32 @@ main {
         height: 16px;
     }
 
+    /* MENU */
+    button,
+    #menu>a,
+    #game-modal a {
+        width: 70px;
+        padding: 7px;
+        font-size: 14px;
+        line-height: 100%;
+    }
+
+    #cardback-choice {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr;
+    }
+
+    #info-screen,
+    #settings-screen {
+        padding: 1% 20% 4%;
+    }
+
+    #save-button {
+        height: 30px;
+        width: 110px;
+    }
+
+    /* GAME */
     #game-container {
         padding-bottom: 50px;
     }

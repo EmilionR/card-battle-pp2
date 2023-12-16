@@ -190,7 +190,7 @@ function playCard(card) {
     let randomSpin = Math.floor(Math.random()* 100 - 50)
     card.style.zIndex = 40;
     card.style.position = "absolute";
-    card.style.transform = `translate(-40px, -175px) rotate(${randomSpin}deg)`
+    card.style.transform = `translate(-50%, -120%) rotate(${randomSpin}deg)`
     cardsOnTable.push(card)
     disableClick()
     enemyPlay()
@@ -213,9 +213,10 @@ function enemyPlay() {
     //Play card to board
     chosenCard.style.position = "absolute";
     chosenCard.style.zIndex = 40;
-    chosenCard.style.transform = `translate(40px, 175px) rotate(${randomSpin}deg)`;
+    chosenCard.style.transform = `translate(50%, 120%) rotate(${randomSpin}deg)`;
     cardsOnTable.push(chosenCard);
     document.getElementById("test-button").classList.add("flashing");
+    
 }
 
 /**
