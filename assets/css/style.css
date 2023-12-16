@@ -366,6 +366,7 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    display: none;
 }
 
 #game-modal div {
@@ -479,7 +480,7 @@ main {
     }
 }
 
-@media (max-height: 480px) {
+@media screen and (max-height: 480px) {
 
     .header {
         height: 20px;
@@ -487,6 +488,10 @@ main {
 
     .footer {
         height: 16px;
+    }
+
+    #game-container {
+        padding-bottom: 50px;
     }
 
     .hand {
