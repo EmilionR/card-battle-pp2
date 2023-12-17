@@ -133,6 +133,7 @@ function enableClick() {
     for (let i = 0; i < hand.children.length; i++) {
         console.log(hand.children[i]);
         hand.children[i].setAttribute("onclick", "playCard(this)");
+        hand.children[i].classList.add("clickable");
     }
 }
 
