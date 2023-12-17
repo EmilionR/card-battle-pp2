@@ -190,6 +190,9 @@ All content is original.
 
 **Images used**
 
-main-bg.jpg - Royalty free  [photo by Zoran Kokanovic](https://unsplash.com/photos/silhouette-photo-of-mountains-surrounded-by-fogs-GJYQfEfRpSg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash
+"main-bg" - Royalty free  [photo by Zoran Kokanovic](https://unsplash.com/photos/silhouette-photo-of-mountains-surrounded-by-fogs-GJYQfEfRpSg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash
+
+"board" Royalty free  [photo by Tim Mossholder](https://unsplash.com/photos/shallow-focus-photography-of-brown-parquet-flooring-ysDq0fY-bzo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash
+  
 
 ### Tutorials & Code Used
