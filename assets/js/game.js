@@ -284,6 +284,8 @@ function gameOver() {
         losses += 1;
         document.getElementById("end-message").textContent = "You lose!";
         document.getElementById("losses").textContent = losses;
+    } else {
+        document.getElementById("end-message").textContent = "It's a draw!";
     }
     showModal();
 }
