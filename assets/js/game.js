@@ -103,6 +103,10 @@ function shuffleDeck(deck) {
  * Start new turn, players draw cards if possible
  */
 function newTurn() {
+    //Remove all used cards from table
+    clearTable();
+    //Make sure deck cannot be clicked
+    document.getElementById("player-deck").classList.remove("draw-deck");
     //Check if player has a full hand
     while (document.getElementById("player-hand").children.length < handSize) {
         //Check if player has cards in deck
@@ -135,6 +139,7 @@ function enableClick() {
         hand.children[i].setAttribute("onclick", "playCard(this)");
         hand.children[i].classList.add("clickable");
     }
+
 }
 
 /**
@@ -143,7 +148,8 @@ function enableClick() {
 function disableClick() {
     let hand = document.getElementById("player-hand");
     for (let i = 0; i < hand.children.length; i++) {
-        hand.children[i].setAttribute("onclick", "")
+        hand.children[i].setAttribute("onclick", "");
+        hand.children[i].classList.remove("clickable");
     }
 }
 
@@ -220,8 +226,9 @@ function enemyPlay() {
     chosenCard.style.zIndex = 40;
     chosenCard.style.transform = `translate(50%, 120%) rotate(${randomSpin}deg)`;
     cardsOnTable.push(chosenCard);
-    document.getElementById("test-button").classList.add("flashing");
 
+    //Proceed to compare played cards
+    compareCards();
 }
 
 /**
@@ -245,23 +252,30 @@ function compareCards() {
     } else {
         console.log("It's a draw!")
     }
-    document.getElementById("test-button").classList.remove("flashing");
-    endOfTurn();
+    updateScore();
 }
 
-/**Finish up turn and prepare for next turn */
-function endOfTurn() {
+/**
+ * 
+ */
+function updateScore() {
     console.log("Player: " + playerScore + ", Enemy: " + enemyScore);
     //Update score counters
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("enemy-score").textContent = enemyScore;
-    clearTable();
     console.log("Cards in hand: " + document.getElementById("player-hand").childNodes.length)
     if (document.getElementById("player-hand").childNodes.length > 0) {
-        newTurn();
+        endOfTurn();
     } else {
         gameOver();
     }
+}
+
+/**Finish up turn and prepare for next turn */
+function endOfTurn() {
+    //Remove all used cards from table
+    document.getElementById("player-deck").setAttribute("onclick", "newTurn()");
+    document.getElementById("player-deck").classList.add("draw-deck");
 }
 
 /**

@@ -16,8 +16,8 @@
         <!-- Wrap all game content in a container -->
         <div id="game-container">
             <div id="decks-wrapper">
-                <div class="deck facedown" id="enemy-deck" onclick="drawCard('enemy')"></div>
-                <div class="deck facedown" id="player-deck" onclick="drawCard('player')"></div>
+                <div class="deck facedown" id="enemy-deck"></div>
+                <div class="deck facedown" id="player-deck"></div>
             </div>
             <!-- Opponent's cards in hand.
                 I leave this div closed on one line to avoid parsing
@@ -34,7 +34,6 @@
                     <p class="text-light-stroke" id="enemy-score">0</p>
                     <p class="text-light-stroke" id="player-score">0</p>
             </div>
-            <button id="test-button" onclick="compareCards()">Proceed</button>
             <!-- Display "Game Over" modal -->
             <div class="container" id="game-modal">
                 <h2 class="text-heavy-stroke" id="end-message">Game Over</h2>

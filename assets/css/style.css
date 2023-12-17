@@ -284,6 +284,7 @@ main {
     gap: 4px;
     align-items: center;
     margin: 5px;
+    animation-duration: 300ms;
 }
 
 #player-hand {
@@ -315,6 +316,7 @@ main {
     font-size: 90%;
     position: relative;
     border: 3px solid var(--clr-black);
+    z-index: 40;
 }
 
 .card {
@@ -331,6 +333,13 @@ main {
     cursor: pointer;
     box-shadow: 0 0 10px var(--clr-light);
 }
+
+.draw-deck:hover {
+    top: -5%;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--clr-light);
+}
+
 
 @keyframes drawCard {
     from {
@@ -370,12 +379,6 @@ main {
     color: var(--clr-white);
 }
 
-.flashing {
-    animation-name: flashing;
-    animation-duration: 500ms;
-    animation-iteration-count: infinite;
-}
-
 /* Game-over Modal */
 #game-modal {
     position: fixed;
@@ -413,16 +416,6 @@ main {
     cursor: pointer;
     box-shadow: 0 0 10px var(--clr-blue);
     color: var(--clr-white);
-}
-
-@keyframes flashing {
-    from {
-        background-color: orange;
-    }
-
-    to {
-        background-color: blueviolet;
-    }
 }
 
 @media screen and (min-width: 480px) {
