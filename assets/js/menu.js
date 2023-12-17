@@ -1,3 +1,6 @@
+//Backup selection if no cardback is selected
+localStorage.setItem('cardBack', 'cardback-2');
+
 //Menu screen that is open
 let openMenu;
 
