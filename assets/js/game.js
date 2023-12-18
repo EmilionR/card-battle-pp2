@@ -103,6 +103,8 @@ function shuffleDeck(deck) {
  * Start new turn, players draw cards if possible
  */
 function newTurn() {
+    //Disable "next turn" button
+    document.getElementById("next-button").style.display = "none";
     //Remove all used cards from table
     clearTable();
     //Make sure deck cannot be clicked
@@ -263,9 +265,10 @@ function updateScore() {
     //Update score counters
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("enemy-score").textContent = enemyScore;
+    //Check if game is over
     console.log("Cards in hand: " + document.getElementById("player-hand").childNodes.length)
     if (document.getElementById("player-hand").childNodes.length > 0) {
-        endOfTurn();
+        document.getElementById("next-button").style.display = "block";
     } else {
         gameOver();
     }
@@ -273,9 +276,7 @@ function updateScore() {
 
 /**Finish up turn and prepare for next turn */
 function endOfTurn() {
-    //Remove all used cards from table
-    document.getElementById("player-deck").setAttribute("onclick", "newTurn()");
-    document.getElementById("player-deck").classList.add("draw-deck");
+    
 }
 
 /**
