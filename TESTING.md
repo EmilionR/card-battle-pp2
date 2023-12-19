@@ -73,6 +73,7 @@ The site was tested on these devices:
   * Samsung Galaxy S22
   * Samsung Galaxy S23
   * Samsung Galaxy S9
+  
 The site was also tested in a number of browsers, including:
 * Google Chrome
 * Mozilla Firefox
