@@ -23,7 +23,7 @@ function openHelp() {
  * Make settings visible
  */
 function openSettings() {
-    openMenu = document.getElementById("settings-screen")
+    openMenu = document.getElementById("settings-screen");
     openMenu.style.display = "flex";
 }
 
@@ -33,7 +33,7 @@ function openSettings() {
 function saveChanges() {
     localStorage.setItem('deckSize', document.getElementById("deck-size").value);
     localStorage.setItem('enemyCards', document.getElementById("open-cards").value);
-    closeMenu(openMenu)
+    closeMenu(openMenu);
 }
 
 /**

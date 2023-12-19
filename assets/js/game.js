@@ -1,8 +1,7 @@
-
 let handSize = 4;
 let playerScore = 0;
 let enemyScore = 0;
-let baseCards = []
+let baseCards = [];
 let enemyDeck, playerDeck;
 let cardsOnTable = [];
 let deckSize = localStorage.getItem("deckSize");
@@ -41,9 +40,9 @@ function createCards() {
     for (let i = 1; i <= 9; i++) {
         let baseCard = {
             points: i
-        }
+        };
         //Put card into base card array
-        baseCards.push(baseCard)
+        baseCards.push(baseCard);
     }
 }
 
@@ -81,7 +80,7 @@ function shuffleDeck(deck) {
     //Loop through the selected deck
     for (let i = 0; i < deck.length; i++) {
         //Select random card from temporary array
-        randomCard = Math.floor(Math.random() * tempArr.length)
+        randomCard = Math.floor(Math.random() * tempArr.length);
         //Assign the random card to the current index of the deck
         deck[i] = tempArr[randomCard];
         //Remove the randomized index from the temporary array before next loop cycle
@@ -103,7 +102,7 @@ function newTurn() {
     while (document.getElementById("player-hand").children.length < handSize) {
         //Check if player has cards in deck
         if (playerDeck.length > 0) {
-            drawCard("player")
+            drawCard("player");
         }
         else { break; }
     }
@@ -111,7 +110,7 @@ function newTurn() {
     while (document.getElementById("enemy-hand").children.length < handSize) {
         //Check if enemy has cards in deck
         if (enemyDeck.length > 0) {
-            drawCard("enemy")
+            drawCard("enemy");
         }
         else { break; }
     }
@@ -259,7 +258,7 @@ function checkIfFinished() {
  * Remove all cards from board
  */
 function clearTable() {
-    for (card in cardsOnTable) {
+    for (let card in cardsOnTable) {
         cardsOnTable[card].remove();
     }
     cardsOnTable = [];
