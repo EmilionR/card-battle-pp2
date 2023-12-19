@@ -65,8 +65,16 @@ function initializeDecks() {
     applyCardback();
 }
 
-/* Apply selected cardback to cards facing away */
+/** 
+ * Apply selected cardback to cards facing away
+*/
 function applyCardback() {
+    //Failsafe, set cardback to default if cannot get value from local storage
+    if(!cardBack){
+        localStorage.setItem('cardBack', 'cardback-2');
+        cardBack = localStorage.getItem('cardBack');
+    }
+    //Apply cardback to decks
     document.getElementById("enemy-deck").classList.add(cardBack);
     document.getElementById("player-deck").classList.add(cardBack);
 }
