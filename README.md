@@ -116,6 +116,7 @@ For this game, I wanted a simple and stylized font that can work for every text 
 
 ### Images
 
+I wanted very simple imagery for this project. A standard landscape background for the menu page, a playing board for the game page, and a stylish image for the backside of the playing cards. The latter, 
 
 ### Wireframe
 
@@ -186,6 +187,10 @@ Please refer to [TESTING.md](TESTING.md) for testing documentation.
 
 1. There was a bug that would crash the site when initalizing the game on some browsers. I fixed it by storing certain variables in local storage rather than passing them between javascript files.
 
+2. When starting another round, the final scores from last round would be visible until the end of the first turn. By changing the way the game updates these score counters, I got it back in order.
+
+3. Mobile screens would get very inconsistent layouts of game elements, especially the player hand. After a lot of fine-tuning things back and forth, I managed to find a happy medium that should work well on all viable screen sizes.
+
 ### Unfixed Bugs
 
 ## Credits
@@ -204,3 +209,5 @@ All content is original.
   
 
 ### Tutorials & Code Used
+
+I used no tutorials for this project. But I did read some documentation from MDN Web Docs and W3Schools at times, to get the CSS styling to behave how I wanted.
