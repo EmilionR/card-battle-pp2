@@ -68,12 +68,18 @@ __Returning Visitors__
 
 The site was tested on these devices:
 * Computer:
-  * 
+  * Thinkpad 480t
 * Mobile
-  * 
+  * Samsung Galaxy S22
+  * Samsung Galaxy S23
+  * Samsung Galaxy S9
 The site was also tested in a number of browsers, including:
-
-* 
+* Google Chrome
+* Mozilla Firefox
+* Brave
+* Microsoft Edge
+* Opera
+* Safari
 
 __Menu Page__
 
