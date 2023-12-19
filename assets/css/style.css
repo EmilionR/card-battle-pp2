@@ -27,7 +27,7 @@ body {
 }
 
 header {
-    height: 20px;
+    height: 30px;
     background-color: var(--clr-red);
     margin-top: 0;
     vertical-align: middle;
@@ -59,9 +59,9 @@ h3 {
 }
 
 h1 {
-    font-size: 75%;
+    font-size: 100%;
     margin: 0;
-    padding: 2px 0 0 10px;
+    padding: 5px 0 0 10px;
 }
 
 h1 a {
@@ -502,14 +502,14 @@ main {
 
         h1 {
             font-size: 130%;
-            padding: 8px 0 0 20px;
+            padding: 12px 0 0 20px;
         }
 
         /* GAME */
         .card,
         .deck {
             height: 80px;
-            width: 50px;
+            width: 60px;
         }
 
         #scores-wrapper {
