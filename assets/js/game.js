@@ -20,12 +20,16 @@ initGameState();
  * create base classes & reset relevant variables
  */
 function initGameState() {
+    //Initialize score counters for new game
     playerScore = 0;
     enemyScore = 0;
+    updateScore();
+    //Hide "game over" modal if open
     hideModal();
+    //Make decks visible
     document.getElementById("player-deck").style.visibility = "visible";
     document.getElementById("enemy-deck").style.visibility = "visible";
-    console.log("Initializing game state");
+    //Initialize decks and start the game
     initializeDecks();
     newTurn();
 }
@@ -254,18 +258,25 @@ function compareCards() {
     } else {
         console.log("It's a draw!")
     }
+    //Update score counters
     updateScore();
+    //Check if game is over
+    checkIfFinished();
 }
 
 /**
- * 
+ *  Update score counters for both players
  */
 function updateScore() {
-    console.log("Player: " + playerScore + ", Enemy: " + enemyScore);
-    //Update score counters
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("enemy-score").textContent = enemyScore;
-    //Check if game is over
+}
+
+/**
+ * Check if cards have run out
+ * if so, end the game
+ */
+function checkIfFinished() {
     console.log("Cards in hand: " + document.getElementById("player-hand").childNodes.length)
     if (document.getElementById("player-hand").childNodes.length > 1) {
         document.getElementById("next-button").style.display = "block";

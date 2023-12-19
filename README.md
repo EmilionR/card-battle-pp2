@@ -1,6 +1,6 @@
 # CARD BATTLE
 
-![Project-image]()
+![Project-image](documentation/pp2-responsive.png)
 
 Card battle is simple card game which, despite its simplicity, challenges the player's brain.
 
@@ -55,6 +55,8 @@ The first challenge I encountered was creating a functional method for shuffling
 
 Another hurdle I had to overcome was handling the data given by the user and making it persist. I chose to use local storage for this, rather than exporting js modules or lumping everything together in a huge tangle of code.
 
+The biggest issue was finding a good way to make the turns flow, due to how javascript doesn't do things in sequence unless absolutely forced to do so in roundabout ways. I dealt with this by making the script stop until it gets user input.
+
 Throughout the process, I've refactored functions to make them as flexible and non-repetitive as I can. If I want to change the number of cards in hand, the card values, or even the game rules - I can do so by simply changing one or two variables without anything breaking.
 
 ## Features
@@ -64,21 +66,25 @@ The site has two pages, one for the main menu and one for the game itself.
 ### Existing Features
 
 #### Home Page:
-![Home page]()
+![Home page](documentation/menu-page.png)
 __The home page has:__
 
-At the main menu, the player can change game settings and open a help window with information about how to play the game.
+At the main menu, the player can change game settings and open a help window with information about how to play the game. Each of these features has its dedicated button. Clicking the "help" button opens a modal with gameplay instructions, clicking "play" starts the game, and clicking "settings" opens another modal where the player can change the game settings.
 
-The settings page lets users adjust the game length and difficulty as well as choose the look of the cards.
+![Home page](documentation/settings-screen.png)
+
+The settings screen lets users adjust the game length and difficulty as well as choose the look of the cards. You can choose whether you want to see what card the opponent has in hand or not. You can also choose whether to play with 9 or 18 cards. And last, you can choose between four different designs for the back of the cards.
 
 #### Game Page:
-![Game page]()
+![Game page](documentation/game-page.png)
 __The Game page has:__
 
 The game lets the users select cards to play, and the computer plays cards in return. Scores are kept and the game can be repeated or terminated when the player wins or loses.
-Animations keep the interest up and lets the player know what to click next.
+Animations keep the interest up and lets the player know what to click next. For example, your cards lift up and glow when you hover over them during your turn.
 
 ### Future Implementations:
+
+In the future, I may add a second type of cards that will play differently. Rather than playing for straight value, they would have special effects such as simply stealing a card or drawing a new hand of cards.
 
 ## User Experience
 
@@ -105,6 +111,8 @@ __Returning visitor goals__
 I have made a color palette that draws inspiration from a traditional deck of playing cards. The palette is adjusted for good contrast.
 
 ### Typography
+
+For this game, I wanted a simple and stylized font that can work for every text element throughout the project. I wanted somethign that looks a little more organic than a standard linear font but still neat and consistent. The font I've chosen is a Google webfont called 'Josefin Sans.'
 
 ### Images
 
@@ -190,9 +198,9 @@ All content is original.
 
 **Images used**
 
-"main-bg" - Royalty free  [photo by Zoran Kokanovic](https://unsplash.com/photos/silhouette-photo-of-mountains-surrounded-by-fogs-GJYQfEfRpSg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash
+"main-bg.webp" - Royalty free  [photo by Zoran Kokanovic](https://unsplash.com/photos/silhouette-photo-of-mountains-surrounded-by-fogs-GJYQfEfRpSg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash
 
-"board" Royalty free  [photo by Tim Mossholder](https://unsplash.com/photos/shallow-focus-photography-of-brown-parquet-flooring-ysDq0fY-bzo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash
+"board.webp" Royalty free  [photo by Tim Mossholder](https://unsplash.com/photos/shallow-focus-photography-of-brown-parquet-flooring-ysDq0fY-bzo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash
   
 
 ### Tutorials & Code Used
