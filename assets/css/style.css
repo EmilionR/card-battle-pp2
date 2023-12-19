@@ -116,6 +116,7 @@ button,
     color: black;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
+    box-shadow: 0 3px 5px var(--clr-black);
 }
 
 button:hover,
