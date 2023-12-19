@@ -1,8 +1,8 @@
 # ELION GYM - TESTING
 
-![Image of the site on devices]()
+![Image of the site on devices](documentation/pp2-responsive.png)
 
-Visit live deployed site: [Elion Gym](https://emilionr.github.io/portfolio-project-1/)
+Visit live deployed site: [Elion Gym](https://emilionr.github.io/card-battle-pp2/game.html)
 
 * [Automated Testing](#automated-testing)
   * [Validator Testing](#validator-testing)
@@ -14,6 +14,12 @@ Visit live deployed site: [Elion Gym](https://emilionr.github.io/portfolio-proje
 ## Automated Testing
 
 ### Validator Testing
+
+This project has been validating using W3C validators for HTML, CSS, and JS.
+
+* CSS
+  * https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Femilionr.github.io%2Fcard-battle-pp2%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning
+  * https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Femilionr.github.io%2Fcard-battle-pp2%2Fgame.html&profile=css3svg&usermedium=all&warning=1&vextwarning
 
 ### Lighthouse
 
