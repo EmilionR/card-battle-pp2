@@ -17,7 +17,7 @@
 </head>
 <body>
     <header>
-        <h1><a class="text-light-stroke" href="index.html">Card Battle</a></h1>
+        <h1><a class="text-light-stroke" href="index.html" aria-label="This is the main page heading.">Card Battle</a></h1>
     </header>
     <main>
         <!-- Wrap all game content in a container -->
@@ -42,7 +42,7 @@
                     <p class="text-light-stroke" id="player-score">0</p>
             </div>
             <!-- "Next turn" button -->
-            <button id="next-button" onclick="newTurn()">Next turn</button>
+            <button id="next-button" onclick="newTurn()" aria-label="Play the next turn">Next turn</button>
             <!-- Display "Game Over" modal -->
             <div class="container" id="game-modal">
                 <h2 class="text-heavy-stroke" id="end-message">Game Over</h2>

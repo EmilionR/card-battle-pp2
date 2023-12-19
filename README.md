@@ -124,6 +124,8 @@ I wanted very simple imagery for this project. A standard landscape background f
 
 ### Accessibility
 
+To improve accessibility, I've made sure to mark all important page elements with descriptive IDs and used aria-labels to help screenreaders. I've also tested the site using WAVE and the Web Disability Simulator browser plugin to see how the site appears to people with visual impairments.
+
 ## Technologies Used
 
 ### Languages Used

@@ -2,7 +2,7 @@
 
 ![Image of the site on devices](documentation/pp2-responsive.png)
 
-Visit live deployed site: [Elion Gym](https://emilionr.github.io/card-battle-pp2/game.html)
+Visit live deployed site: [Card Battle](https://emilionr.github.io/card-battle-pp2/game.html)
 
 * [Automated Testing](#automated-testing)
   * [Validator Testing](#validator-testing)

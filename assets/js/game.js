@@ -115,8 +115,6 @@ function newTurn() {
         else { break; }
     }
     enableClick();
-
-
 }
 
 /**
@@ -129,7 +127,6 @@ function enableClick() {
         hand.children[i].setAttribute("onclick", "playCard(this)");
         hand.children[i].classList.add("clickable");
     }
-
 }
 
 /**
@@ -183,13 +180,13 @@ function drawCard(whose) {
  * Play the selected card to the board
  */
 function playCard(card) {
-    let randomSpin = Math.floor(Math.random() * 100 - 50)
+    let randomSpin = Math.floor(Math.random() * 100 - 50);
     card.style.zIndex = 40;
     card.style.position = "absolute";
-    card.style.transform = `translate(-50%, -120%) rotate(${randomSpin}deg)`
-    cardsOnTable.push(card)
-    disableClick()
-    enemyPlay()
+    card.style.transform = `translate(-50%, -120%) rotate(${randomSpin}deg)`;
+    cardsOnTable.push(card);
+    disableClick();
+    enemyPlay();
 }
 
 /**Enemy chooses a card and plays it to the board */

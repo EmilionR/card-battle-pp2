@@ -18,7 +18,7 @@
 
 <body>
     <header>
-        <h1><a class="text-light-stroke" href="index.html">Card Battle</a></h1>
+        <h1><a class="text-light-stroke" href="index.html" aria-label="This is the main page heading.">Card Battle</a></h1>
     </header>
     <main>
         <!-- Wrap all menu contents in a container -->
@@ -27,9 +27,9 @@
             <div id="under-title"></div>
             <!-- Main Menu -->
             <div id="menu">
-                <button onclick="openHelp()">Help</button>
-                <a href="game.html">PLAY!</a>
-                <button onclick="openSettings()">Settings</button>
+                <button onclick="openHelp()" aria-label="Open the help menu">Help</button>
+                <a href="game.html" aria-label="Start the game">PLAY!</a>
+                <button onclick="openSettings()" aria-label="Open the settings menu">Settings</button>
             </div>
             <!-- Display information about how to play -->
             <div id="info-screen">
@@ -38,7 +38,7 @@
                     wins the sum of both cards.
                     The challenge is to predict your enemy's moves and not waste your resources.
                 </p>
-                <button class="close-menu" onclick="closeMenu()">X</button>
+                <button class="close-menu" onclick="closeMenu()" aria-label="Close this menu">X</button>
             </div>
             <!-- Display settings screen -->
             <div id="settings-screen">
@@ -64,8 +64,8 @@
                     <div class="cardback-3" onclick="chooseCardback(this)"></div>
                     <div class="cardback-4" onclick="chooseCardback(this)"></div>
                 </div>
-                <button id="save-button" onclick="saveChanges()">Save changes</button>
-                <button class="close-menu" onclick="closeMenu()">X</button>
+                <button id="save-button" onclick="saveChanges()" aria-label="Save changes">Save changes</button>
+                <button class="close-menu" onclick="closeMenu()" aria-label="Close this menu">X</button>
             </div>
         </div>
     </main>
