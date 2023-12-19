@@ -51,13 +51,15 @@ footer {
     color: var(--clr-white);
 }
 
-footer > * {
+footer>* {
     margin: 0;
     padding: 7px;
     font-size: 120%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--clr-white);
 }
 
@@ -123,7 +125,7 @@ button,
 
 button:hover,
 #menu a:hover,
-#game-modal a:hover{
+#game-modal a:hover {
     box-shadow: 0 0 10px var(--clr-red);
     cursor: pointer;
     color: white;
@@ -159,7 +161,6 @@ button:hover,
     margin-bottom: 10px;
     margin-top: 0;
     transform: skew(-40deg);
-    
 }
 
 /* "How to play" & "Settings" */
@@ -395,6 +396,7 @@ main {
     from {
         background-color: var(--clr-light);
     }
+
     to {
         background-color: var(--clr-blue);
     }
@@ -639,7 +641,7 @@ main {
         gap: 2px;
     }
 
-    #menu-screen > * {
+    #menu-screen>* {
         margin-top: 0;
     }
 
@@ -676,6 +678,7 @@ main {
     .hand {
         height: 25%;
         gap: 5px;
+        bottom: 20px;
     }
 
     #scores-wrapper {
