@@ -43,6 +43,16 @@ function closeMenu() {
     openMenu.style.display = "none";
 }
 
+/**
+ * Select the clicked cardback style
+ */
 function chooseCardback(choice) {
     localStorage.setItem('cardBack', choice.getAttribute("class"));
+    //Remove "selected" effect from previous choice
+    let choices = document.getElementById("cardback-choice").children;
+    for(let i = 0; i < choices.length; i++){
+        choices[i].classList.remove("selected");
+    }
+    //Set "selected" effect on selected cardback
+    choice.classList.add("selected");
 }

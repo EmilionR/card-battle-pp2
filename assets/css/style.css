@@ -8,11 +8,6 @@
     --clr-white: #eeeeee;
 }
 
-#test-button {
-    position: fixed;
-    margin: 10%;
-}
-
 body,
 html {
     margin: 0;
@@ -237,7 +232,7 @@ select {
 }
 
 #cardback-choice>div:hover {
-    box-shadow: 0 0 10px var(--clr-blue);
+    box-shadow: 0 0 10px var(--clr-light);
     cursor: pointer;
 }
 
@@ -255,6 +250,10 @@ select {
 
 .cardback-4 {
     background: url(../images/cardback-4.webp) no-repeat center center/cover;
+}
+
+.selected {
+    box-shadow: 0 0 15px var(--clr-blue);
 }
 
 /* GAME */
