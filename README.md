@@ -193,6 +193,8 @@ Please refer to [TESTING.md](TESTING.md) for testing documentation.
 
 ### Unfixed Bugs
 
+Browser consoles may warn about an error with the Permissions-Policy header. However, this is a GitHub issue and not a bug in the site itself.
+
 ## Credits
 
 ### Content

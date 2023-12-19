@@ -10,7 +10,6 @@ let enemyCards = localStorage.getItem("enemyCards");
 let cardBack = localStorage.getItem('cardBack');
 let wins = 0;
 let losses = 0;
-console.log(deckSize);
 
 createCards();
 initGameState();
@@ -44,11 +43,8 @@ function createCards() {
             points: i
         }
         //Put card into base card array
-        console.log("Creating card, value: " + baseCard.points)
         baseCards.push(baseCard)
     }
-    console.log(`Base cards created.
-    Number of cards: ${baseCards.length}`)
 }
 
 /**
@@ -67,14 +63,6 @@ function initializeDecks() {
     //Shuffle each deck
     shuffleDeck(playerDeck);
     shuffleDeck(enemyDeck);
-    console.log("Enemy deck:");
-    for (let i = 0; i < enemyDeck.length; i++) {
-        console.log(enemyDeck[i]);
-    }
-    console.log("Player deck:")
-    for (let i = 0; i < playerDeck.length; i++) {
-        console.log(playerDeck[i]);
-    }
     applyCardback();
 }
 
@@ -82,14 +70,12 @@ function initializeDecks() {
 function applyCardback() {
     document.getElementById("enemy-deck").classList.add(cardBack);
     document.getElementById("player-deck").classList.add(cardBack);
-    console.log(document.getElementById("enemy-deck").classList);
 }
 
 /**
  * Shuffle deck to place array indexes in random order
  */
 function shuffleDeck(deck) {
-    console.log("shuffling...");
     let randomCard;
     let tempArr = [...deck];
     //Loop through the selected deck
@@ -141,7 +127,6 @@ function enableClick() {
     let hand = document.getElementById("player-hand");
 
     for (let i = 0; i < hand.children.length; i++) {
-        console.log(hand.children[i]);
         hand.children[i].setAttribute("onclick", "playCard(this)");
         hand.children[i].classList.add("clickable");
     }
@@ -185,13 +170,8 @@ function drawCard(whose) {
         //Add new card element in hand div
         hand.insertAdjacentHTML("beforeend", card);
         deck.shift();
-        console.log(deck.length + " cards left in deck;")
-    }
-    else {
-        console.log("Deck is empty")
-    }
-    //Hide deck if empty
-    if (deck.length == 0) {
+    } else {
+         //Hide deck if empty
         if (whose == 'player') {
             document.getElementById("player-deck").style.visibility = "hidden";
         } else {
@@ -218,10 +198,8 @@ function enemyPlay() {
     let hand = document.getElementById("enemy-hand");
     let randomSpin = Math.floor(Math.random() * 100 - 50);
     //Choose a random card from hand
-    console.log("enemy choosing card");
     let randomCard = Math.floor(Math.random() * hand.children.length);
     let chosenCard = hand.children[randomCard];
-    console.log(chosenCard)
     //If card is facing away, show number face
     if (chosenCard.classList.contains("facedown")) {
         chosenCard.classList.remove("facedown", cardBack);
@@ -241,22 +219,15 @@ function enemyPlay() {
  * Compare player card to enemy card to determine winner of turn
  */
 function compareCards() {
-    console.log("Comparing cards...")
     //Compare value of cards on table
     let playerCardValue = parseInt(cardsOnTable[0].getAttribute("points"));
-    console.log(playerCardValue);
     let enemyCardValue = parseInt(cardsOnTable[1].getAttribute("points"));
-    console.log(enemyCardValue);
     //Sum values together to create score for winner
     let sum = playerCardValue + enemyCardValue;
     if (playerCardValue < enemyCardValue) {
-        console.log("You lose the round. Opp gets " + sum)
         enemyScore += sum;
     } else if (enemyCardValue < playerCardValue) {
-        console.log("You win the round and get " + sum)
         playerScore += sum;
-    } else {
-        console.log("It's a draw!")
     }
     //Update score counters
     updateScore();
@@ -277,7 +248,6 @@ function updateScore() {
  * if so, end the game
  */
 function checkIfFinished() {
-    console.log("Cards in hand: " + document.getElementById("player-hand").childNodes.length)
     if (document.getElementById("player-hand").childNodes.length > 1) {
         document.getElementById("next-button").style.display = "block";
     } else {
@@ -297,7 +267,6 @@ function clearTable() {
 
 /** End game and display win/lose message */
 function gameOver() {
-    console.log("Game over")
     if (playerScore > enemyScore) {
         wins += 1;
         document.getElementById("end-message").textContent = "You win!";

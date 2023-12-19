@@ -31,8 +31,6 @@ function openSettings() {
  * Save settings in object
  */
 function saveChanges() {
-    console.log(document.getElementById("deck-size").value);
-    console.log(document.getElementById("open-cards").value)
     localStorage.setItem('deckSize', document.getElementById("deck-size").value);
     localStorage.setItem('enemyCards', document.getElementById("open-cards").value);
     closeMenu(openMenu)
