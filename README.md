@@ -171,7 +171,7 @@ To Deploy the site using GitHub Pages:
 2. Go to the repository for this project, [EmilionR/card-battle-pp2](https://github.com/EmilionR/card-battle-pp2/commits/main/)
 3. Click the Fork button in the top right corner.
 
-### How to Clone the repository
+#### How to Clone the repository
 
 1. Log in (or sign up) to GitHub.
 2. Go to the repository for this project, [EmilionR/card-battle-pp2](https://github.com/EmilionR/card-battle-pp2/commits/main/)
@@ -208,7 +208,8 @@ All content is original.
 "main-bg.webp" - Royalty free  [photo by Zoran Kokanovic](https://unsplash.com/photos/silhouette-photo-of-mountains-surrounded-by-fogs-GJYQfEfRpSg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash
 
 "board.webp" Royalty free  [photo by Tim Mossholder](https://unsplash.com/photos/shallow-focus-photography-of-brown-parquet-flooring-ysDq0fY-bzo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash
-  
+
+Cardback images are generated from free AI image generators.
 
 ### Tutorials & Code Used
 
