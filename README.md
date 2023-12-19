@@ -140,7 +140,7 @@ GitHub - To store files and provide a live site.
 
 Google Fonts - For stylish headings.
 
-Google Dev Tools - For debugging and trying out design improvements on the fly.
+Google & Mozilla Developer Tools - For debugging and trying out design improvements on the fly.
 
 GNU Image Manipulation Program - Cropping and scaling images for faster load times.
 

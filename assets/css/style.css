@@ -335,7 +335,8 @@ main {
     animation-timing-function: linear;
 }
 
-.clickable:hover {
+.clickable:hover,
+.clickable:focus {
     top: -20%;
     cursor: pointer;
     box-shadow: 0 0 10px var(--clr-light);
