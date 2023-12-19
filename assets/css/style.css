@@ -679,6 +679,7 @@ main {
         height: 25%;
         gap: 5px;
         bottom: 20px;
+        margin-bottom: 20px;
     }
 
     #scores-wrapper {
