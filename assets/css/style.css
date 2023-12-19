@@ -374,7 +374,7 @@ main {
 
 #next-button {
     position: fixed;
-    z-index: 99;
+    z-index: 90;
     bottom: 19%;
     right: 5%;
     animation-name: buttonflash;
@@ -408,6 +408,7 @@ main {
     align-items: center;
     text-align: center;
     display: none;
+    z-index: 99;
 }
 
 #game-modal div {
@@ -531,7 +532,7 @@ main {
 
     @keyframes drawCard {
         from {
-            z-index: 99;
+            z-index: 60;
             right: -30%;
             top: 0%;
             transform: rotateY(88deg);
