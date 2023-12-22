@@ -15,7 +15,7 @@ Visit live deployed site: [Card Battle](https://emilionr.github.io/card-battle-p
 
 ### Validator Testing
 
-This project has been validated using W3C validators for HTML and CSS, plus JSHint for JavaScript.
+This project has been validated using W3C/jigsaw validators for HTML and CSS.
 
 * HTML
   * https://validator.w3.org/nu/?doc=https%3A%2F%2Femilionr.github.io%2Fcard-battle-pp2%2Findex.html
@@ -25,8 +25,15 @@ This project has been validated using W3C validators for HTML and CSS, plus JSHi
   * https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Femilionr.github.io%2Fcard-battle-pp2%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning
   * https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Femilionr.github.io%2Fcard-battle-pp2%2Fgame.html&profile=css3svg&usermedium=all&warning=1&vextwarning
 
-* JavaScript
-  
+### JSHint
+
+The JavaScript code has been validated using JSHint.
+
+__Menu script__
+![JSHint menu validation](documentation/jshint-menu.png)
+
+__Game script__
+![JSHint game validation](documentation/jshint-game.png)
 
 ### Lighthouse
 
