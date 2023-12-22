@@ -79,12 +79,12 @@ The settings screen lets users adjust the game length and difficulty as well as 
 ![Game page](documentation/game-page.png)
 __The Game page has:__
 
-The game lets the users select cards to play, and the computer plays cards in return. Scores are kept and the game can be repeated or terminated when the player wins or loses.
+The game lets the users select cards to play, and the computer plays cards in return. Scores are kept and the game can be repeated or terminated when the player wins or loses. The game also tracks and displays the player's victories and defeats.
 Animations keep the interest up and lets the player know what to click next. For example, your cards lift up and glow when you hover over them during your turn.
 
 ### Future Implementations:
 
-In the future, I may add a second type of cards that will play differently. Rather than playing for straight value, they would have special effects such as simply stealing a card or drawing a new hand of cards.
+In the future, I may add a second type of cards that will play differently. Rather than playing for straight value, they would have special effects such as simply stealing a card or drawing a new hand of cards. Due to the way I set up the game functions, this would be easy to implement with very little code.
 
 ## User Experience
 
