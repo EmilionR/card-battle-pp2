@@ -116,7 +116,7 @@ For this game, I wanted a simple and stylized font that can work for every text 
 
 ### Images
 
-I wanted very simple imagery for this project. A standard landscape background for the menu page, a playing board for the game page, and a stylish image for the backside of the playing cards. The latter, 
+I wanted very simple imagery for this project. A standard landscape background for the menu page, a playing board for the game page, and a stylish image for the backside of the playing cards. The latter comes with a few different options that the user can select from the menu page.
 
 ### Wireframe
 
@@ -124,7 +124,7 @@ I wanted very simple imagery for this project. A standard landscape background f
 
 ### Accessibility
 
-To improve accessibility, I've made sure to mark all important page elements with descriptive IDs and used aria-labels to help screenreaders. I've also tested the site using WAVE and the Web Disability Simulator browser plugin to see how the site appears to people with visual impairments.
+To improve accessibility, I've made sure to mark all important page elements with descriptive IDs and used aria-labels to help screenreaders. I've also tested the site using WAVE and the Web Disability Simulator browser plugin to see how the site appears to people with visual impairments. All elements have been styled with good contrast, and I have used borders and shadows to add even more separation to key elements.
 
 ## Technologies Used
 
@@ -191,7 +191,7 @@ Please refer to [TESTING.md](TESTING.md) for testing documentation.
 
 2. When starting another round, the final scores from last round would be visible until the end of the first turn. By changing the way the game updates these score counters, I got it back in order.
 
-3. Mobile screens would get very inconsistent layouts of game elements, especially the player hand. After a lot of fine-tuning things back and forth, I managed to find a happy medium that should work well on all viable screen sizes.
+3. Mobile screens would get inconsistent layouts of game elements, especially the player hand. After a lot of fine-tuning things back and forth, I managed to find a happy medium that should work well on all viable screen sizes.
 
 ### Unfixed Bugs
 
